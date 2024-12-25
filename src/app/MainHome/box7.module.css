@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "Public Sans Regular";
+    src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot");
+    src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.svg#Public Sans Regular")format("svg");
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+    src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+  }
+  @font-face {
+    font-family: "Halyard Display";
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+  }
+  
+.statBoxLEFT{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+.statBoxRight{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.box7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.imageContainer {
+  position: relative;
+  width: 80%; 
+  text-align: center;
+  margin-bottom: 50px; 
+}
+
+/* Background Image */
+.background {
+  background-image: url("../../../public/HomeImages/Frameimage.png"); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px; 
+}
+
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  max-width: 1200px; 
+  position: absolute;
+  bottom: -50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  width: 170px; 
+  margin: 10px;
+}
+
+
+.icon {
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.number {
+  font-family: "Halyard Display";
+  font-size: 32px;
+  font-weight: 900;
+  color: #233b77;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-family: "Public Sans Regular";
+  color: #414042;
+  font-weight: 100;
+  font-size: 18px; 
+}
+
+.paragraph {
+  margin: 60px 0px 30px 0px; 
+  color: #000;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 20px; 
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5; 
+  width: 80%;
+}
+
+/* Responsive Styles */
+@media (min-width: 900px) and (max-width: 1400px){
+  .imageContainer{
+    width: 100%;
+  }
+  .background {
+   
+    height: 500px; 
+  }
+  .statBoxLEFT{
+    display: flex;
+    margin-right: 0px;
+  }
+  .statBoxRight{
+    display: flex;
+
+  }
+
+  .statsContainer {
+  
+  justify-content: space-around;
+    bottom: -60px;
+  }
+
+  .statBox {
+    width: 140px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .number {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .paragraph {
+    margin: 30px 0px 20px 0px; 
+    font-size: 16px; 
+    width: 90%; 
+  }
+  .icon img{
+    width: 60px;
+    height: 60px;
+  }
+
+}
+@media (min-width: 767px) and (max-width: 900px){
+  .imageContainer{
+    width: 100%;
+  }
+  .background {
+   
+    height: 350px; 
+  }
+  .statBoxLEFT{
+    display: flex;
+    margin-right: 0px;
+  }
+  .statBoxRight{
+    display: flex;
+
+  }
+
+  .statsContainer {
+  
+  justify-content: space-around;
+    bottom: -60px;
+  }
+
+  .statBox {
+    width: 120px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .number {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .paragraph {
+    margin: 30px 0px 20px 0px; 
+    font-size: 14px; 
+    width: 90%; 
+  }
+  .icon img{
+    width: 60px;
+    height: 60px;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .imageContainer{
+    width: 100%;
+  }
+  .background {
+   
+    height: 300px; 
+  }
+  .statBoxLEFT{
+    display: flex;
+    margin-right: 0px;
+  }
+  .statBoxRight{
+    display: flex;
+
+  }
+
+  .statsContainer {
+  
+  justify-content: space-evenly;
+    bottom: -60px;
+  }
+
+  .statBox {
+    width: 100px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .number {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .paragraph {
+    margin: 30px 0px 20px 0px; 
+    font-size: 12px; 
+    width: 90%; 
+  }
+  .icon img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 600px){
+  .imageContainer{
+    width: 100%;
+  }
+  .background {
+   
+    height: 190px; 
+  }
+  .statBoxLEFT{
+    display: flex;
+    margin-right: 0px;
+  }
+  .statBoxRight{
+    display: flex;
+
+  }
+
+  .statsContainer {
+  
+  justify-content: center;
+    bottom: -60px;
+  }
+
+  .statBox {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    width: 70px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .number {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .paragraph {
+    margin: 30px 0px 20px 0px; 
+
+    font-size: 12px; 
+    width: 95%; 
+  }
+  .icon img{
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+
+@media (max-width: 360px) {
+  .imageContainer{
+    width: 100%;
+  }
+  .background {
+   
+    height: 170px; 
+  }
+  .statBoxLEFT{
+    display: flex;
+    margin-right: 0px;
+  }
+  .statBoxRight{
+    display: flex;
+
+  }
+
+  .statsContainer {
+  justify-content: center;
+    bottom: -60px;
+  }
+
+  .statBox {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .number {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 8px;
+  }
+
+  .paragraph {
+    margin: 30px 0px 20px 0px; 
+
+    font-size: 12px; 
+    width: 95%; 
+  }
+  .icon img{
+    width: 30px;
+    height: 30px;
+  }
+}

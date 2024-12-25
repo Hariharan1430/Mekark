@@ -1,0 +1,928 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Parent box styling */
+/* .box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* CSS Code (Box1.module.css) */
+
+.box1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundImage1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../public/HomeImages/Home_page.png"); /* Replace with your path */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.overlayWrapper1 {
+  margin-top: 200px;
+  margin-left: -500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+}
+.contentWrapper1 {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(207, 209, 228, 0.2) 40%, /* Upper part - darker, higher opacity */
+    rgba(207, 209, 228, 0.1) 100% /* Bottom part - lighter, lower opacity */
+  );
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+  width: 350px;
+  height: 350px;
+  animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+  width: 420px;
+  height: 420px;
+  animation-delay: 0.5s;
+}
+
+.circle:nth-child(3) {
+  width: 470px;
+  height: 470px;
+  animation-delay: 1s;
+}
+
+
+.heading1,.heading11 {
+  font-family: "Halyard Display";
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+.heading1{
+  margin-bottom: -10px;
+}
+.heading11{
+  margin-bottom: 20px;
+}
+
+.description1,.description11 {
+  font-family: "Halyard Display";
+  font-weight: 100;
+
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.productbutton {
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 50px;
+background: var(--secondary, #1D75BD);
+transition: background-color 0.3s ease, transform 0.3s ease;
+border: none;
+  
+    padding: 5px 10px;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+.productbutton img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px; 
+}
+.productbutton:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) and (min-width: 601px){
+  .box1{
+    height: 90vh;
+  }
+  .overlayWrapper1{
+    margin-top: 200px;
+  margin-left: -300px;
+
+  }
+  
+  .heading1,.heading11  {
+    font-size: 45px;
+  }
+  .description1,.description11{
+    font-size: 20px;
+  }
+  .heading11{
+    margin-bottom: 10px;
+  }
+  .productbutton{
+    font-size: 20px;
+    
+  }
+  .productbutton img {
+    width: 13px;
+    height: 13px;
+    
+
+  }
+  .circle{
+    margin-left: -50px;
+  }
+ 
+  .circle:nth-child(1) {
+    width: 320px;
+    height: 320px;
+    animation-delay: 0s;
+  }
+  
+  .circle:nth-child(2) {
+    width: 370px;
+    height: 370px;
+    animation-delay: 0.5s;
+  }
+  
+  .circle:nth-child(3) {
+    width: 420px;
+    height: 420px;
+    animation-delay: 1s;
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+  .box1{
+    height: 70vh;
+  }
+  .overlayWrapper1{
+    margin: 200px 0px 0px 0px;
+    justify-content: flex-start;
+
+  }
+  .contentWrapper1{
+    margin: 0px 10px 0px 0px;
+  }
+  .heading1,.heading11  {
+    font-size: 20px;
+  }
+  .description1,.description11{
+    font-size: 14px;
+  }
+  .heading11{
+    margin-bottom: 10px;
+  }
+  .productbutton{
+    font-size: 14px;
+    
+  }
+  .productbutton img {
+    width: 10px;
+    height: 10px;
+    
+
+  }
+  .circle{
+    margin-left: -50px;
+  }
+  .circle:nth-child(1) {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle:nth-child(3) {
+    width: 350px;
+    height: 350px;
+  }
+ 
+}
+
+/* CSS Code (Box2.module.css) */
+
+.box2 {
+  width: 100%;
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  background-color:#F1F5FF;
+  padding: 20px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.textdiv2 p {
+  color: #1E2E5F;
+  font-family: "Halyard Display";
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.buttondiv2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.custombutton2 {
+  border-radius: 12px;
+  background: #1D75BD;
+  color: #FFF;
+  font-family: "Halyard Display";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+  padding: 10px;
+}
+
+.custombutton2 img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px; 
+}
+
+.custombutton2:hover {
+  background-color: #1363d1; 
+  transform: translateY(-2px); /* Lift effect */
+}
+
+@media (max-width: 900px) and (min-width:571px) {
+  
+ .textdiv2 p{
+  font-size: 15px;
+ }
+.custombutton2{
+  font-size: 15px;
+}
+ 
+  .custombutton2 img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px; 
+  }
+}
+
+@media (max-width:570px) {
+  .buttondiv2{
+  width: 70%;
+
+  }
+  .textdiv2{
+    width: 100%;
+  }
+  .textdiv2 p{
+    font-size: 14px;
+   }
+  .custombutton2{
+    font-size: 14px;
+  }
+  .custombutton2 img {
+    width: 14px;
+    height: 14px;
+    margin-left: 10px; 
+  }
+}
+
+/* CSS Code (Box3.module.css) */
+.box3 {
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.cornerImage {
+  position: absolute;
+  
+}
+
+.leftCorner {
+  bottom:-6%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
+.rightCorner {
+  top: 32%;
+  right: 8%;
+  transform: translate(50%, -50%);
+  width: 200px;
+  height: auto;
+}
+
+.content3 {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.subheading3 {
+  color: #1C75BC;
+text-align: center;
+font-family: "Halyard Display";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+
+.heading3 {
+color: #1E2E5F;
+text-align: center;
+font-family: "Halyard Display";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.description3 {
+  max-width: 55%;
+  color: #1E2E5F;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media (min-width: 901px) and (max-width: 1100px){
+  .box3 {
+    padding: 10px;
+  }
+
+  .cornerImage {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .subheading3 {
+    font-size: 18px;
+  }
+
+  .heading3 {
+    font-size: 34px;
+  }
+
+  .description3 {
+    max-width: 70%;
+    font-size: 18px;
+  }
+
+}
+@media (min-width: 481px) and (max-width: 900px){
+  .box3 {
+    padding: 10px;
+  }
+
+  .cornerImage {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .subheading3 {
+    font-size: 14px;
+  }
+
+  .heading3 {
+    font-size: 32px;
+  }
+
+  .description3 {
+    max-width: 70%;
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 480px) {
+  .box3 {
+    padding: 10px;
+  }
+
+  .cornerImage {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .subheading3 {
+    font-size: 12px;
+  }
+
+  .heading3 {
+    font-size: 24px;
+  }
+
+  .description3 {
+    max-width: 100%;
+    font-size: 12px;
+  }
+}
+
+
+/* CSS Code (Box4.module.css) */
+.box4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card4 {
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.imageContainer4 {
+  background-color: #FFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 12px;
+  padding: 15px;
+  
+}
+
+.title4 {
+  color: #223872;
+text-align: center;
+font-family: "Halyard Display";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.description4 {
+  color: #000;
+text-align: center;
+font-family: "Halyard Display";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #B6BBCB;
+  margin-top: 20px;
+}
+
+@media (min-width:930px) and (max-width:1200px) {
+  .card4 {
+    gap: 10px;
+
+    min-width: 200px;
+    max-width: 250px;
+    padding: 10px;
+  
+  }
+  
+  .imageContainer4  {
+ 
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .title4 {
+   
+  font-size: 16px;
+ 
+  }
+  
+  .description4 {
+  
+  font-size: 14px;
+  
+  }
+  
+}
+@media (min-width:721px) and (max-width:930px) {
+  .card4 {
+    gap: 10px;
+
+    min-width: 150px;
+    max-width: 200px;
+   padding: 5px;
+  }
+  
+  .imageContainer4 {
+ 
+  
+  
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .imageContainer4 img{
+    height: 70px;
+    width: 70px;
+  }
+  
+  .title4 {
+   
+  font-size: 14px;
+ 
+  }
+  
+  .description4 {
+  
+  font-size: 12px;
+  
+  }
+  
+}
+@media (min-width:481px) and (max-width:720px) {
+  .card4 {
+    gap: 5px;
+
+    min-width: 80px;
+    max-width: 120px;
+   padding: 3px;
+
+  }
+  .imageContainer4 {
+ 
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .imageContainer4 img{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .title4 {
+   
+  font-size: 14px;
+ 
+  }
+  
+  .description4 {
+  
+  font-size: 12px;
+  
+  }
+  
+}
+@media (max-width: 480px) {
+  .box4{
+    padding: 10px 20px 20px 20px;
+  }
+  .card4 {
+    gap: 5px;
+
+    min-width: 120px;
+    max-width: 120px;
+    
+   padding: 2px;
+  }
+  .imageContainer4 {
+ 
+   
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .imageContainer4 img{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .title4 {
+   
+  font-size: 14px;
+ 
+  }
+  
+  .description4 {
+  
+  font-size: 12px;
+  
+  }
+ }
+
+
+
+/* CSS Code (Box5.module.css) */
+.box5 {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+.cornerImageLeft,
+.cornerImageRight {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('/left-corner.png') no-repeat center center;
+  background-size: contain;
+}
+
+.cornerImageLeft {
+  top: -10px;
+  left: -10px;
+}
+
+.cornerImageRight {
+  top: -10px;
+  right: -10px;
+  background: url('/right-corner.png') no-repeat center center;
+}
+
+.content5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1px;
+}
+
+.mainHeading5 {
+  color: #1C75BC;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+.subHeading5 {
+  color: #1E2E5F;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.imageContainer5 {
+  margin-bottom: 2%;
+
+ 
+}
+
+.description5 {
+
+ max-width: 70%;
+  color: var(--Primary, #1E2E5F);
+text-align: center;
+font-family: "Halyard Display";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 2%;
+ 
+}
+
+.readMoreButton5 {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--Primary, #1E2E5F);
+  color: var(--Primary, #1E2E5F);
+text-align: center;
+font-family: "Halyard Display";
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin-bottom: 3%;
+
+}
+
+.readMoreButton5:hover {
+  background-color:#1E2E5F;
+  color: #FFF;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #B6BBCB;
+  margin-top: 20px;
+}
+@media  (min-width: 901px) and (max-width: 1100px) {
+  .box5 {
+    padding: 15px;
+  }
+
+  .mainHeading5 {
+    font-size: 18px;
+  }
+
+  .subHeading5 {
+    font-size: 32px;
+  }
+
+  .description5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    max-width: 80%;
+  }
+  .imageContainer5 img{
+    width: 800px;
+    height: auto;
+  }
+  .readMoreButton5{
+    font-size: 18px;
+  }
+  
+}
+
+@media  (min-width: 767px) and (max-width: 900px) {
+  .box5 {
+    padding: 15px;
+  }
+
+  .mainHeading5 {
+    font-size: 14px;
+  }
+
+  .subHeading5 {
+    font-size: 24px;
+  }
+
+  .description5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    max-width: 80%;
+  }
+  .imageContainer5 img{
+    width: 600px;
+    height: auto;
+  }
+  .readMoreButton5{
+    font-size: 14px;
+  }
+  
+}
+
+@media  (min-width: 481px) and (max-width: 767px) {
+  .box5 {
+    padding: 15px;
+  }
+
+  .mainHeading5 {
+    font-size: 14px;
+  }
+
+  .subHeading5 {
+    font-size: 24px;
+  }
+
+  .description5 {
+    margin-bottom: 10px;
+    font-size: 12px;
+    max-width: 90%;
+  }
+  .imageContainer5 img{
+    width: 450px;
+    height: auto;
+  }
+  .readMoreButton5{
+    font-size: 12px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .box5 {
+    padding: 15px;
+  }
+
+  .mainHeading5 {
+    font-size: 12px;
+  }
+
+  .subHeading5 {
+    font-size: 22px;
+  }
+
+  .description5 {
+    margin-bottom: 10px;
+    font-size: 12px;
+    max-width: 90%;
+  }
+  .imageContainer5 img{
+    width: 300px;
+    height: auto;
+  }
+  .readMoreButton5{
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+
