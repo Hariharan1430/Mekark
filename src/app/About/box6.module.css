@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+
+.box6{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F7F7F7;
+  }
+.titlebox6{
+color: var(--Primary, #1E2E5F);
+font-family: "Halyard Display";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 20px 0px 10px 0px;
+  }
+ .para1box6,.para2box6{
+  font-family: "Halyard Display";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: var(--Primary, #1E2E5F);
+
+ }
+
+ @media (max-width: 1200px) and (min-width:901px){
+  .titlebox6{
+    margin: 15px 0px 10px 0px;
+    font-size: 42px;
+  }
+  .para1box6,.para2box6{
+    font-size: 22px;
+  }
+
+}
+ @media (max-width: 900px) and (min-width:768px){
+  .titlebox6{
+    margin: 10px 0px 10px 0px;
+    font-size: 32px;
+  }
+  .para1box6,.para2box6{
+    font-size: 18px;
+  }
+
+}
+
+ @media (max-width: 767px) and (min-width:601px){
+  .titlebox6{
+    margin: 7px 0px 7px 0px;
+    font-size: 28px;
+  }
+  .para1box6,.para2box6{
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 600px) and (min-width:392px){
+.titlebox6{
+  margin: 7px 0px 7px 0px;
+  font-size: 24px;
+}
+.para1box6,.para2box6{
+  font-size: 12px;
+}
+
+}
+
+
+.divider {
+width: 100%;
+height: 1px;
+background-color: #B6BBCB;
+margin-top: 20px;
+}
+
+@media (max-width: 391px) {
+    .para1box6,.para2box6{
+        font-size: 9.5px;
+      }
+      .titlebox6{
+        margin: 7px 0px 7px 0px;
+        font-size: 24px;
+      }
+
+}

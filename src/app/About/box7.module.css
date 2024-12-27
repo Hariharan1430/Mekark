@@ -1,0 +1,224 @@
+
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book") format("svg");
+}
+
+/* General Styles */
+.box7 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F7F7F7;
+}
+
+.box7InnerContainer {
+  width: 75%;
+  background-color: #F7F7F7;
+}
+
+/* Desktop and Tablet Layout */
+.grid {
+  display: grid;
+  width: 100%;
+  row-gap: 30px;
+  align-items: stretch;
+}
+
+.desktop {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.box:hover .icon {
+  transform: rotateY(180deg);
+}
+
+.text {
+  color: var(--Primary, #1E2E5F);
+  font-family: "Halyard Display Book";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: color 0.3s ease;
+}
+
+.box:hover .text {
+  color: blue;
+  animation: text-hover-effect 1s forwards;
+}
+
+/* Keyframes for Text Animation */
+@keyframes text-hover-effect {
+  0% {
+    color: blue;
+  }
+  100% {
+    color: var(--Primary, #1E2E5F);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 901px){
+  .box7InnerContainer{
+    width: 90%;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+}
+
+
+@media (max-width: 900px) and (min-width: 768px){
+  .box7InnerContainer{
+    width: 100%;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box7InnerContainer{
+    width: 100%;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Mobile Slider (Max Width 600px) */
+@media (max-width: 600px) {
+  .grid {
+    display: none; 
+  }
+   .box{
+    border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+
+   
+  .mobileSlider {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+  }
+
+  .slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .navigationDots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #B6BBCB;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .activeDot {
+    background: #1D75BD;
+  }
+
+  .swipeArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    touch-action: pan-y;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+ 
+}
+
+/* Hide Mobile Slider on Desktop and Tablet */
+@media (min-width: 601px) {
+  .mobileSlider {
+    display: none;
+  }
+}

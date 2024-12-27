@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Public Sans Regular";
+  src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot");
+  src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.svg#Public Sans Regular")format("svg");
+}
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+}
+
+.box5 {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+  }
+  
+  .tabBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #EDEDED;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    }
+    
+    .tab {
+    padding: 10px 70px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    }
+    
+    .activeTab {
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 50px;
+    background: var(--secondary, #1D75BD);
+    border: #007bff;
+    }
+    
+    
+    .tab:hover {
+    color: #007bff;
+    }
+
+    .tabBarText{
+      text-align: center;
+      font-family: "Public Sans Regular";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+        }
+        .content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+          justify-content: center;
+        }    
+  .imageContainer {
+    max-width: 400px;
+  }
+  
+  .image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .textContainer {
+    max-width: 400px;
+    color: #000;
+    font-family: "Halyard Display Book";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; 
+  }
+
+
+  @media (max-width: 1200px) and (min-width: 901px){
+    .textContainer{
+      font-size: 18px;
+    }
+    .tabBarText{
+      font-size: 18px;
+    }
+
+  }
+
+
+  @media (max-width: 900px) and (min-width: 601px) {
+    
+    .box5{
+      margin-top: 10px;
+      padding: 10px;
+    }
+    .activeTab {
+      padding:  0px 50px;
+    }
+    .tabBar{
+      padding: 7px;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    .tab{
+      padding: 10px 40px;
+    }
+  
+    .tabBarText {
+      font-size: 14px;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+   .textContainer{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px 20px 0px 30px;
+    margin-bottom: 10px;
+
+   }
+  .image{
+   padding: 0px 20px;
+  }
+    
+  
+   
+  }
+  
+  @media (max-width: 601px) and (min-width: 431px) {
+    .box5{
+      margin-top: 10px;
+      padding: 10px;
+    }
+    .activeTab {
+      padding:  0px 20px;
+    }
+    .tabBar{
+      padding: 7px;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    .tab{
+      padding: 10px 40px;
+    }
+  
+    .tabBarText {
+      font-size: 12px;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+   .textContainer{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0px 20px 0px 30px;
+    margin-bottom: 10px;
+
+   }
+  .image{
+   padding: 0px 20px;
+  }
+    
+  
+  }
+  
+  
+  /* Mobile styles */
+  @media (max-width: 430px) {
+    .box5{
+      margin-top: 10px;
+      padding: 10px;
+    }
+    .activeTab {
+      padding: 5px 15px;
+    }
+    .tabBar{
+      padding: 5px;
+      width: 90%;
+      margin-bottom: 20px;  
+    }
+    .tab{
+      padding: 10px 15px;
+    }
+  
+    .tabBarText {
+      font-size: 12px;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+   .textContainer{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0px 20px 0px 30px;
+    margin-bottom: 10px;
+
+   }
+  .image{
+   padding: 0px 20px;
+  }
+   
+  }
+  

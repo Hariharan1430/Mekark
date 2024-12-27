@@ -281,7 +281,6 @@ line-height: normal;
     }
   
     .addressBox  {
-      font-size: 14px;
       margin-bottom: 10px;
     }
   
@@ -312,14 +311,16 @@ line-height: normal;
         font-size: 18px;
         margin-bottom: 8px;
       }
-      
+      .linkList{
+        font-size: 12px;
+      }
       .linksBox {
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 8px;
       }
       
       .linkList li a {
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 10px;
       }
   

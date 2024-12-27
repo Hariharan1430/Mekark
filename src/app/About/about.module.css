@@ -324,17 +324,15 @@ color: var(--Primary, #1E2E5F);
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         background-color: #F7F7F7;
-
       }
        
       .innerContainer {
         display: grid;
-        grid-template-columns: repeat(8, 1fr); /* 8 columns for web and tablet */
+        grid-template-columns: repeat(8, 1fr); 
         row-gap: 40px;
-
-        width: 70%;
+        width: 75%;
       }
       
       .box {
@@ -345,40 +343,38 @@ color: var(--Primary, #1E2E5F);
         text-align: center;
         padding: 20px;
         border-radius: 8px;
-        perspective: 1000px; /* Create 3D space for flipping */
-        transition: background-color 1s ease; /* Smooth transition for background */
+        perspective: 1000px; 
+        transition: background-color 1s ease; 
       }
-      
+    
       .box:hover {
-        background-color: #fff; /* Change background color to white */
+        background-color: #fff;
       }
       
       .text {
         color: var(--Primary, #1E2E5F);
-
         font-family: "Halyard Display book";
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
         margin-top: 10px;
-        transition: color 1s ease; /* Smooth transition for text color */
+        transition: color 1s ease; 
       }
       
       .box:hover .text {
-        animation: hoverTextColor 1s forwards; /* Apply animation for text color */
+        animation: hoverTextColor 1s forwards; 
       }
       
-      /* Keyframe animation for text color */
       @keyframes hoverTextColor {
         0% {
-          color: #1E2E5F; /* Original text color */
+          color: #1E2E5F; 
         }
         50% {
-          color: blue; /* Change text color to blue */
+          color: blue; 
         }
         100% {
-          color: #1E2E5F; /* Return to original color */
+          color: #1E2E5F; 
         }
       }
       
@@ -387,12 +383,12 @@ color: var(--Primary, #1E2E5F);
         width: 70px;
         height: 70px;
         position: relative;
-        transform-style: preserve-3d; /* Enables 3D flipping */
-        transition: transform 0.6s; /* Smooth flipping animation */
+        transform-style: preserve-3d; 
+        transition: transform 0.6s;
       }
       
       .box:hover .iconContainer {
-        transform: rotateY(180deg); /* Rotate on hover */
+        transform: rotateY(180deg); 
       }
       
       .iconFront,
@@ -400,22 +396,21 @@ color: var(--Primary, #1E2E5F);
         position: absolute;
         width: 100%;
         height: 100%;
-        backface-visibility: hidden; /* Hide back side when flipped */
+        backface-visibility: hidden; 
         display: flex;
         align-items: center;
         justify-content: center;
       }
       
       .iconFront {
-        z-index: 2; /* Keep the front face on top */
+        z-index: 2; 
       }
       
       .iconBack {
-        transform: rotateY(180deg) scaleX(-1); /* Back face rotated with mirror effect */
+        transform: rotateY(180deg) scaleX(-1); 
         z-index: 1;
       }
   
-  /* First row: Span 2 columns each to create spaces in between */
   .innerContainer > :nth-child(1) {
     grid-column: span 2;
   }
@@ -432,93 +427,180 @@ color: var(--Primary, #1E2E5F);
     grid-column: span 2;
   }
   
-  /* Second row: Place boxes between the first row gaps */
   .innerContainer > :nth-child(5) {
-    grid-column: 2 / span 2; /* Start from the second column */
+    grid-column: 2 / span 2; 
   }
   
   .innerContainer > :nth-child(6) {
-    grid-column: 4 / span 2; /* Start from the fourth column */
+    grid-column: 4 / span 2; 
   }
   
   .innerContainer > :nth-child(7) {
-    grid-column: 6 / span 2; /* Start from the sixth column */
+    grid-column: 6 / span 2; 
   }
   
-  /* Icon and text styling */
   .icon {
     width: 70px;
-        height: 70px;
+    height: 70px;
     margin-bottom: 10px;
   }
   
- 
-  /* Tablet view */
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) and (min-width: 901px){
+    .iconContainer {
+      width: 60px;
+      height: 60px;
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
     .innerContainer {
-      grid-template-columns: repeat(8, 1fr); /* Keep the same layout as web */
-      gap: 15px; /* Reduce gap size */
+      grid-template-columns: repeat(8, 1fr);
+      gap: 15px;
+      width: 80%;
     }
   
-    /* Reduce icon and text size */
+    .text {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 900px) and (min-width: 768px){
+    .iconContainer {
+      width: 50px;
+      height: 50px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+    .innerContainer {
+      grid-template-columns: repeat(8, 1fr); 
+      gap: 15px;
+      width: 90%;
+    }
+  
+    .text {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) and (min-width: 601px) {
+    .box4{
+     display: flex;
+     justify-content: flex-start;
+     padding: 0px 10px 30px 10px;
+
+    }
+    .innerContainer {
+     width: 100%;
+     grid-template-columns: repeat(3, 1fr); 
+     gap: 10px;
+   }
+     .iconContainer {
+       width: 50px;
+       height: 50px;
+     }
+ 
+     .icon {
+       width: 50px;
+       height: 50px;
+     }
+     .box{
+       padding: 20px 10px;
+     }
+ 
+     .text {
+       font-size: 12px;
+     }
+     
+   
+     .innerContainer > :nth-child(1) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(2) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(3) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(4) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(5) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(6) {
+       grid-column: span 1; 
+     }
+   
+     .innerContainer > :nth-child(7) {
+       grid-column: 2 / span 1; 
+     }
+   
+ 
+   }
+  /* Mobile view */
+  @media (max-width: 600px) {
+   .box4{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 10px 30px 10px;
+  }
+   .innerContainer {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+  }
+    .iconContainer {
+      width: 40px;
+      height: 40px;
+    }
+
     .icon {
       width: 40px;
       height: 40px;
     }
-  
-    .text {
-      font-size: 12px;
+    .box{
+      padding: 20px 10px;
     }
-  }
-  
-  /* Mobile view */
-  @media (max-width: 480px) {
-   
-    .iconContainer {
-      width: 30px;
-      height: 30px;
-    }
-    .innerContainer {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-      gap: 10px; /* Reduce gap size */
-    }
-  
-    /* Mobile Layout: 3 rows */
-    .innerContainer > :nth-child(1) {
-      grid-column: span 1; /* First box in first row */
-    }
-  
-    .innerContainer > :nth-child(2) {
-      grid-column: span 1; /* Second box in first row */
-    }
-  
-    .innerContainer > :nth-child(3) {
-      grid-column: span 1; /* Third box in first row */
-    }
-  
-    .innerContainer > :nth-child(4) {
-      grid-column: span 1; /* First box in second row */
-    }
-  
-    .innerContainer > :nth-child(5) {
-      grid-column: span 1; /* Second box in second row */
-    }
-  
-    .innerContainer > :nth-child(6) {
-      grid-column: span 1; /* Third box in second row */
-    }
-  
-    .innerContainer > :nth-child(7) {
-      grid-column: 2 / span 1; /* Center the last box in the third row */
-    }
-  
-    /* Reduce icon and text size */
-    .icon {
-      width: 30px;
-      height: 30px;
-    }
-  
+
     .text {
       font-size: 10px;
     }
+    
+  
+    .innerContainer > :nth-child(1) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(2) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(3) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(4) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(5) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(6) {
+      grid-column: span 1; 
+    }
+  
+    .innerContainer > :nth-child(7) {
+      grid-column: 2 / span 1; 
+    }
+  
   }

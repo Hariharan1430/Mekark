@@ -1,5 +1,9 @@
 'use client'
 import styles from "./about.module.css"
+import Box5 from "./box5"
+import Box6 from "./box6"
+import Box7 from "./box7"
+
 
 export default function AboutPage() {
 
@@ -59,6 +63,8 @@ export default function AboutPage() {
       <p className={styles.para1box3}>Our Mekark Expert Team and Consultants provide various</p>
       <p className={styles.para2box3}> industry engineering services such a</p>
       </div>
+     
+
 
       {/* Box4 */}
 
@@ -77,7 +83,27 @@ export default function AboutPage() {
     ))}
   </div>
 </div>
+<div className={styles.divider} style={{marginTop:'-1px'}}></div>
+
+ {/* Box5 */}
+     <Box5 />
+     <div className={styles.divider} style={{marginTop:'-1px'}}></div>
+
+     <Box6 />
+     <Box7 />
+     <div className={styles.divider} style={{marginTop:'-1px'}}></div>
+
+
+
+
+
+
+
+
     </div>
+
+         
+
 
    
   );
