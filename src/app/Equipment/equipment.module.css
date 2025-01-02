@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Halyard Display Book";
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+  }
+  @font-face {
+      font-family: "Inter";
+      src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+      src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+    }
+  
+  
+    @font-face {
+      font-family: "Halyard Display";
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    /* Styling for the box1 */
+  .box1 {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background-image: url('../../../public/EquipmentImages/Equipmentbanner.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .overlay {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70%;
+      left: 83%;
+      transform: translate(-50%, -50%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%; 
+    }
+    
+    .title {
+      color: #FFF;
+      font-family: "Inter";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+    }
+    
+   
+  
+      /* code for Responive box1  design */
+  
+    @media (max-width: 1200px) and (min-width: 901px) {
+      .overlay{
+        left: 80%;
+      }
+    
+      .title {
+        font-size: 48px;
+      }
+    
+      
+    }
+  
+    
+    @media (max-width: 900px) and (min-width: 768px) {
+      
+      .overlay{
+        left: 80%;
+      }
+    
+      .title {
+        font-size: 42px;
+      }
+
+    }
+  
+    @media (max-width: 767px) and (min-width: 601px){
+      .overlay{
+        left:85%;
+        width: 100%;
+      }
+      .title {
+        font-size: 28px;
+      }
+    
+  
+    }
+    
+    @media (max-width: 600px) {
+      
+      .overlay{
+        left:70%;
+        width: 100%;
+      }
+      .title {
+        font-size: 28px;
+      }
+
+    }
+
+        /* Styling for the box2 */
+    .box2{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #FFF;
+      }
+    .title1box2{
+    color: var(--Primary, #1E2E5F);
+    font-family: "Halyard Display";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+      }
+      .title2box2{
+        color: var(--Primary, #1E2E5F);
+        font-family: "Halyard Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -13px;
+        margin-bottom: 15px;
+          }
+
+     .parabox2{
+        max-width: 70%;
+        font-family: "Halyard Display Book";
+        font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--Primary, #1E2E5F);
+    text-align: center;
+    
+     }
+    
+     @media (max-width: 1300px) and (min-width:901px){
+      .title1box2{
+        font-size: 32px;
+        margin-bottom: 4px;
+      }
+      .title2box2{
+        font-size: 32px;
+        margin-bottom: 10px;
+  
+      }
+      .parabox2{
+        max-width: 70%;
+        font-size: 18px;
+      }
+    
+    }
+     @media (max-width: 900px) and (min-width:768px){
+      .title1box2{
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+      .title2box2{
+        font-size: 24px;
+        margin-bottom: 10px;
+  
+      }
+      .parabox2{
+        max-width: 90%;
+        font-size: 14px;
+      }
+    
+    }
+    
+     @media (max-width: 767px) and (min-width:601px){
+      .title1box2{
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+      .title2box2{
+        font-size: 24px;
+        margin-bottom: 4px;
+  
+      }
+      .parabox2{
+        max-width: 100%;
+        font-size: 14px;
+      }
+    
+    }
+    
+    
+    @media (max-width: 600px) {
+    .title1box2{
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+    .title2box2{
+      font-size: 22px;
+      margin-bottom: 4px;
+
+    }
+    .parabox2{
+      max-width: 100%;
+      font-size: 12px;
+    }
+    
+    }
+    
+    

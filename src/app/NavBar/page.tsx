@@ -53,7 +53,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/equipment">
+              <Link legacyBehavior href="/Equipment">
                 <a title="Explore Equipment">Equipment</a>
               </Link>
             </li>
@@ -167,7 +167,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/equipment">
+              <Link legacyBehavior href="/Equipment">
                 <a title="Explore Equipment" onClick={closeMenu}>
                   Equipment
                 </a>
