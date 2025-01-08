@@ -15,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #F7F7F7;
+    margin-top: 10px;
   }
 .titlebox6{
 color: var(--Primary, #1E2E5F);

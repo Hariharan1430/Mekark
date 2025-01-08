@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.textContainer {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading1 {
+  color: var(--secondary, #1D75BD);
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading2 {
+  color: var(--Primary, #1E2E5F);
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.galleryContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.arrowButton {
+  all: unset;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.arrowButton img {
+  width: 30px;
+  height: 30px;
+}
+
+.arrowButton:first-of-type {
+  left: 50px;
+}
+
+.arrowButton:last-of-type {
+  right: 50px;
+}
+
+.arrowButton:hover img {
+  filter: brightness(0.8);
+}
+
+.imageRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cornerImage {
+  width: 100px;
+  height: 250px;
+  flex: 1;
+}
+
+.sideImage {
+  max-width: 470px;
+  max-height: 250px;
+  flex: 2;
+  margin: 0 8px;
+}
+
+.centerImage {
+  max-width: 487px;
+  max-height: 322px;
+  flex: 3;
+  border-radius: 12px;
+  filter: drop-shadow(0px 0px 4px rgba(30, 46, 95, 0.50));
+  margin: 0 8px;
+}
+
+  /* Responive codes */
+
+@media (max-width: 1552px) and (min-width: 1401px) {
+  .arrowButton:first-of-type {
+    left: 10px;
+  }
+  .arrowButton:last-of-type {
+    right: 10px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 901px) {
+  .textContainer {
+    width: 100%;
+  }
+  .heading1 {
+    font-size: 18px;
+  }
+  .heading2 {
+    font-size: 32px;
+  }
+  .cornerImage {
+    width: 10px;
+    height: 160px;
+    flex: 1;
+  }
+  .sideImage {
+    max-width: 250px;
+    max-height: 250px;
+    
+  }
+  .centerImage {
+    max-width: 320px;
+    max-height: 322px;
+    
+  }
+  .galleryContainer {
+    gap: 5px;
+  }
+  .imageRow {
+    gap: 0px;
+  }
+  .arrowButton:first-of-type {
+    left: 30px;
+  }
+  .arrowButton:last-of-type {
+    right: 30px;
+  }
+  .arrowButton img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .textContainer {
+    width: 100%;
+  }
+  .heading1 {
+    font-size: 16px;
+  }
+  .heading2 {
+    font-size: 26px;
+  }
+  .cornerImage {
+    display: none;
+  }
+  .sideImage {
+    max-width: 270px;
+    max-height: 130px;
+  }
+  .centerImage {
+    max-width: 430px;
+    max-height: 250px;
+  }
+  .galleryContainer {
+    gap: 5px;
+  }
+  .imageRow {
+    gap: 0px;
+  }
+  .arrowButton:first-of-type {
+    left: 20px;
+  }
+  .arrowButton:last-of-type {
+    right: 20px;
+  }
+  .arrowButton img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 601px) {
+  .textContainer {
+    width: 100%;
+  }
+  .heading1 {
+    font-size: 16px;
+  }
+  .heading2 {
+    font-size: 26px;
+  }
+  .cornerImage {
+    display: none;
+  }
+  .sideImage {
+    width: 160px;
+    height: 130px;
+  }
+  .centerImage {
+    max-width: 350px;
+    max-height: 250px;
+  }
+  .galleryContainer {
+    gap: 5px;
+  }
+  .imageRow {
+    gap: 0px;
+  }
+  .arrowButton:first-of-type {
+    left: 20px;
+  }
+  .arrowButton:last-of-type {
+    right: 20px;
+  }
+  .arrowButton img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 351px) {
+  .textContainer {
+    width: 100%;
+  }
+  .heading1 {
+    font-size: 14px;
+  }
+  .heading2 {
+    font-size: 22px;
+  }
+  .cornerImage {
+    display: none;
+  }
+  .sideImage {
+    width: 130px;
+    height: 100px;
+  }
+  .centerImage {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .galleryContainer {
+    gap: 5px;
+  }
+  .imageRow {
+    gap: 0px;
+  }
+  .arrowButton:first-of-type {
+    left: 10px;
+  }
+  .arrowButton:last-of-type {
+    right: 10px;
+  }
+  .arrowButton img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .textContainer {
+    width: 100%;
+  }
+  .heading1 {
+    font-size: 14px;
+  }
+  .heading2 {
+    font-size: 22px;
+  }
+  .cornerImage {
+    display: none;
+  }
+  .sideImage {
+    width: 50px;
+    height: 100px;
+  }
+  .centerImage {
+    max-width: 230px;
+    max-height: 210px;
+  }
+  .galleryContainer {
+    gap: 5px;
+  }
+  .imageRow {
+    gap: 0px;
+  }
+  .arrowButton:first-of-type {
+    left: 2px;
+  }
+  .arrowButton:last-of-type {
+    right: 2px;
+  }
+  .arrowButton img {
+    width: 20px;
+    height: 20px;
+  }
+}

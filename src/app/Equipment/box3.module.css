@@ -1,158 +1,393 @@
-/* styles/Box3.module.css */
-
 .box3 {
+  margin-top: 20px;
   width: 100%;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-.tabBar {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.tabButton {
-  flex: 1;
-  padding: 12px 16px;
-  background-color: #f3f3f3;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  text-align: center;
-}
-
-.tabButton.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.tabContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Grid for Tabs */
-.grid {
-  width: 100%;
-  display: grid;
-  gap: 16px;
-}
-
-.grid[data-tab='1'] {
-  grid-template-columns: repeat(10, 1fr);
-  background-color: aquamarine;
-}
-.grid[data-tab='2'] {
-  grid-template-columns: repeat(10, 1fr);
-  background-color: aquamarine;
-}
-
-.grid[data-tab='1']> :nth-child(1) {
-  grid-column:  span 2; 
-}
-.grid[data-tab='1']> :nth-child(2) {
-  grid-column:  span 2; 
-}
-.grid[data-tab='1']> :nth-child(3) {
-  grid-column:  span 2; 
-}
-.grid[data-tab='1']> :nth-child(4) {
-  grid-column:  span 2; 
-}
-.grid[data-tab='1']> :nth-child(5) {
-  grid-column:  span 2; 
-}
-.grid[data-tab='1']> :nth-child(6) {
-  grid-column: 2 / span 2; 
-}
-
-.grid[data-tab='1'] :nth-child(7) {
-  grid-column: 4 / span 2; 
-}
-
-.grid[data-tab='1'] > :nth-child(8) {
-  grid-column: 6 / span 2; 
-}
-.grid[data-tab='1'] > :nth-child(9) {
-  grid-column: 8 / span 2; 
-}
-/* Tab 3: Three boxes in a row */
-.grid[data-tab='3'] {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Grid Items */
-.gridItem {
-  text-align: center;
-  
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
 }
 
-.gridItem .icon {
-  background-color: #fff;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+/* Tab Bar Styles */
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #EDEDED;
+  padding: 10px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  }
+  
+  .tab {
+  padding: 10px 70px;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .activeTab {
+  padding: 10px 50px;
+  color: #fff;
+  border-radius: 50px;
+  background: var(--secondary, #1D75BD);
+  border: #007bff;
+  }
+  
+  
+  .tab:hover {
+  color: #007bff;
+  }
+
+  .tabBar button{
+    text-align: center;
+    font-family: "Public Sans Regular";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+      }
+/* Content Section */
+.content {
+  width: 100%;
+  padding: 20px;
+  background-color: #F7F7F7;
+}
+
+.boxContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.innerContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+}
+
+.innerContainer > :nth-child(1),
+.innerContainer > :nth-child(2),
+.innerContainer > :nth-child(3),
+.innerContainer > :nth-child(4),
+.innerContainer > :nth-child(5) {
+  grid-column: span 2;
+}
+
+.innerContainer > :nth-child(6) {
+  grid-column: 2 / span 2;
+}
+
+.innerContainer > :nth-child(7) {
+  grid-column: 4 / span 2;
+}
+
+.innerContainer > :nth-child(8) {
+  grid-column: 6 / span 2;
+}
+
+.innerContainer > :nth-child(9) {
+  grid-column: 8 / span 2;
+}
+
+.innerContainer.storageUnit {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  perspective: 1000px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.gridItem img {
-  width: 70px;
-  height: 70px;
+.box:hover {
+  transform: scale(1.1);
 }
 
-.gridItem p {
-  margin: 0;
-  font-size: 14px;
+.text {
+  margin-top: 10px;
+  font-family: "Halyard Display book";
+  font-size: 20px;
+  transition: color 0.3s ease;
+  color: #000; /* Default color */
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+.box:hover .text {
+  color: #007bff; 
+}
+
+.iconContainer {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.box:hover .iconContainer {
+  transform: rotateY(180deg); 
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  display: block;
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 1200px) and (min-width: 901px){
+  .tabBar button {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px; 
+    
   }
 
-  .gridItem {
-    height: 100px;
+
+}
+@media (max-width: 900px) and (min-width: 768px){
+  .tabBar {
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 20px;  
+  }
+
+  .activeTab {
+    padding: 5px 15px;
+  }
+  
+  .tab {
+    padding: 10px 15px;
+  }
+
+  .tabBar button {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+
+  .innerContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    height: 150px; 
+    max-width: 200px; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .iconContainer {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .icon {
     width: 100px;
+    height: 100px;
   }
 
-  .gridItem img {
-    width: 36px;
-    height: 36px;
+  .text {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px; 
+    
   }
 
-  .gridItem p {
-    font-size: 12px;
+  .innerContainer > :nth-child(1),
+  .innerContainer > :nth-child(2),
+  .innerContainer > :nth-child(3),
+  .innerContainer > :nth-child(4),
+  .innerContainer > :nth-child(5),
+  .innerContainer > :nth-child(6),
+  .innerContainer > :nth-child(7),
+  .innerContainer > :nth-child(8),
+  .innerContainer > :nth-child(9) {
+    grid-column: span 1;
   }
+  .innerContainer.storageUnit{
+    gap: 1px;
+  }
+
 }
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 767px) and (min-width: 601px){
+  .tabBar {
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 20px;  
   }
 
+  .activeTab {
+    padding: 5px 15px;
+  }
+  
+  .tab {
+    padding: 10px 15px;
+  }
+
+  .tabBar button {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+
+  .innerContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    row-gap: 5px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    height: 150px; 
+    max-width: 200px; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .iconContainer {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .icon {
+    width: 80px;
+    height: 90px;
+  }
+
+  .text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px; 
+    
+  }
+
+  .innerContainer > :nth-child(1),
+  .innerContainer > :nth-child(2),
+  .innerContainer > :nth-child(3),
+  .innerContainer > :nth-child(4),
+  .innerContainer > :nth-child(5),
+  .innerContainer > :nth-child(6),
+  .innerContainer > :nth-child(7),
+  .innerContainer > :nth-child(8),
+  .innerContainer > :nth-child(9) {
+    grid-column: span 1;
+  }
+  .innerContainer.storageUnit{
+    gap: 1px;
+  }
+
+}
+  @media (max-width: 600px) {
+    .tabBar {
+      padding: 5px;
+      width: 90%;
+      margin-bottom: 20px;  
+    }
+  
+    .activeTab {
+      padding: 5px 15px;
+    }
+    
+    .tab {
+      padding: 10px 15px;
+    }
+  
+    .tabBar button {
+      font-size: 12px;
+      line-height: 1.3;
+    }
   
 
-  .gridItem img {
-    width: 32px;
-    height: 32px;
+    .innerContainer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      row-gap: 5px;
+    }
+  
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; 
+      height: 150px; 
+      max-width: 200px; 
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .iconContainer {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+  
+    .icon {
+      width: 80px;
+      height: 90px;
+    }
+  
+    .text {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 20px; 
+      
+    }
+  
+    .innerContainer > :nth-child(1),
+    .innerContainer > :nth-child(2),
+    .innerContainer > :nth-child(3),
+    .innerContainer > :nth-child(4),
+    .innerContainer > :nth-child(5),
+    .innerContainer > :nth-child(6),
+    .innerContainer > :nth-child(7),
+    .innerContainer > :nth-child(8),
+    .innerContainer > :nth-child(9) {
+      grid-column: span 1;
+    }
+    .innerContainer.storageUnit{
+      gap: 1px;
+    }
+  
+ 
   }
 
-  .gridItem p {
-    font-size: 11px;
-  }
-}

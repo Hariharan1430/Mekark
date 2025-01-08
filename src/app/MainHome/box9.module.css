@@ -25,6 +25,7 @@
     width: 100%;
     margin: 50px  10px 10px 10px;
     text-align: center;
+    
   }
   
   
@@ -67,6 +68,7 @@ margin-bottom: 10px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-bottom: 30px;
   }
   
   
@@ -177,11 +179,17 @@ line-height: normal;
   }
   
   .discoverButton:hover {
-    background-color:#1D75BD;
+    border: 1px solid var(--Primary, #4B587F);
+    background-color:#4B587F;
+    color: #FFF; 
+   }
+   .discoverButton:hover img {
+    filter: brightness(0) invert(1); 
   }
   
   .arrowIcon {
     margin-left: 8px;
+    margin-top: 3px;
     width: 14px;
     height: 14px;
   }
@@ -211,9 +219,12 @@ line-height: normal;
     }
     
     .arrowButton:hover {
-      background-color: #1D75BD;
-      border-color: #007bff;
-      color: white;
+      border: 1px solid var(--Primary, #4B587F);
+      background-color:#4B587F;
+      color: #FFF;
+    }
+    .arrowButton:hover img {
+      filter: brightness(0) invert(1); 
     }
     .arrowButton:disabled {
       opacity: 0.5; 
@@ -223,6 +234,9 @@ line-height: normal;
        /* Responive codes */
 
     @media (max-width: 1200px) and (min-width: 1000px){
+      .paragraph1{
+        margin-bottom: 30px;
+       }
       .subHeading{
         font-size: 32px;
       }
@@ -239,7 +253,9 @@ line-height: normal;
 
     }
     @media (max-width: 999px) and (min-width:801px) {
-
+       .paragraph1{
+        margin-bottom: 20px;
+       }
       .subHeading{
         font-size: 28px;
       }
@@ -267,6 +283,9 @@ line-height: normal;
     }
     @media (max-width: 800px) and (min-width:601px) {
 
+      .paragraph1{
+        margin-bottom: 15px;
+       }
       .subHeading{
         font-size: 24px;
       }
@@ -293,6 +312,9 @@ line-height: normal;
       }
     }
     @media (max-width: 600px) and (min-width:451px){
+      .paragraph1{
+        margin-bottom: 10px;
+       }
       .outerFrame{
         margin-bottom: 10px;
       }
@@ -323,6 +345,9 @@ line-height: normal;
       
     }
     @media (max-width: 450px) {
+      .paragraph1{
+        margin-bottom: 10px;
+       }
       .outerFrame{
         margin-bottom: 10px;
       }

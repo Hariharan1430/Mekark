@@ -17,6 +17,15 @@
   url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
 }
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+}
 
 .container {
   display: flex;
@@ -157,8 +166,10 @@ border: none;
   margin-left: 10px; 
 }
 .productbutton:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  border: 1px solid var(--Primary, #4B587F);
+
+  background-color:#4B587F;
+  color: #FFF;
 }
 
 /* Pulse Animation */
@@ -240,8 +251,12 @@ border: none;
   .contentWrapper1{
     margin: 0px 10px 0px 0px;
   }
+  .heading1{
+    margin-bottom: 0.1px;
+
+  }
   .heading1,.heading11  {
-    font-size: 20px;
+    font-size: 22px;
   }
   .description1,.description11{
     font-size: 14px;
@@ -289,7 +304,7 @@ border: none;
   background-color:#F1F5FF;
   padding: 20px;
   border-radius: 8px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .textdiv2 p {
@@ -319,7 +334,6 @@ line-height: normal;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
   padding: 10px;
 }
@@ -331,8 +345,10 @@ line-height: normal;
 }
 
 .custombutton2:hover {
-  background-color: #1363d1; 
-  transform: translateY(-2px); /* Lift effect */
+  border: 1px solid var(--Primary, #4B587F);
+
+  background-color:#4B587F;
+  color: #FFF;
 }
 
 @media (max-width: 900px) and (min-width:571px) {
@@ -401,7 +417,7 @@ line-height: normal;
 }
 
 .content3 {
-  padding: 2rem;
+  padding: 20px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -427,13 +443,14 @@ font-size: 48px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-top: -10px;
 }
 
 .description3 {
   max-width: 55%;
   color: #1E2E5F;
   text-align: center;
-  font-family: "Halyard Display";
+  font-family: "Halyard Display Book";
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
@@ -559,7 +576,7 @@ line-height: normal;
 .description4 {
   color: #000;
 text-align: center;
-font-family: "Halyard Display";
+font-family: "Halyard Display Book";
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -612,9 +629,6 @@ line-height: normal;
   }
   
   .imageContainer4 {
- 
-  
-  
     padding: 10px;
     margin-bottom: 15px;
   }
@@ -624,33 +638,24 @@ line-height: normal;
   }
   
   .title4 {
-   
   font-size: 14px;
- 
   }
   
   .description4 {
-  
   font-size: 12px;
-  
   }
   
 }
 @media (min-width:481px) and (max-width:720px) {
+  .box4{
+    padding: 10px 20px 20px 20px;
+  }
   .card4 {
     gap: 5px;
-
-    min-width: 80px;
-    max-width: 120px;
-   padding: 3px;
-
+    min-width: 130px;
+    max-width: 170px;
+   padding: 2px;
   }
-  .imageContainer4 {
- 
-    padding: 5px;
-    margin-bottom: 15px;
-  }
-
   .imageContainer4 img{
     height: 50px;
     width: 50px;
@@ -675,16 +680,13 @@ line-height: normal;
   }
   .card4 {
     gap: 5px;
-
-    min-width: 120px;
-    max-width: 120px;
-    
+    min-width: 130px;
+    max-width: 150px;
    padding: 2px;
   }
   .imageContainer4 {
- 
-   
-    padding: 5px;
+
+    padding: 20px;
     margin-bottom: 15px;
   }
 
@@ -804,7 +806,8 @@ margin-bottom: 3%;
 }
 
 .readMoreButton5:hover {
-  background-color:#1E2E5F;
+  border: 1px solid var(--Primary, #4B587F);
+  background-color:#4B587F;
   color: #FFF;
 }
 .divider {
@@ -893,6 +896,8 @@ margin-bottom: 3%;
   }
   .readMoreButton5{
     font-size: 12px;
+    padding: 5px 15px;
+
   }
   
 }
@@ -916,12 +921,12 @@ margin-bottom: 3%;
     max-width: 90%;
   }
   .imageContainer5 img{
-    width: 300px;
+    width: 350px;
     height: auto;
   }
   .readMoreButton5{
     font-size: 12px;
-    padding: 10px;
+    padding: 5px 15px;
   }
 }
 

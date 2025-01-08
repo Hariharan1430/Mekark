@@ -38,22 +38,21 @@ export default function AboutPage() {
       </div>
       <div className={styles.item}>
         <p className={styles.paragraph}>
-          &#8226;Mekark Structure Pvt Ltd, is the leading manufacturer and Supplier for Pre-Engineered Buildings and Prefab Buildings services provider for the past 15 years based in India. We specialize in designing and building structures for a wide range of industries, including commercial, industrial, and residential
+          &#8226; Mekark Structure Pvt Ltd, is the leading manufacturer and Supplier for Pre-Engineered Buildings and Prefab Buildings services provider for the past 15 years based in India. We specialize in designing and building structures for a wide range of industries, including commercial, industrial, and residential
         </p>
       </div>
       <div className={styles.item}>
         <p className={styles.paragraph}>
-          &#8226;Our team of experienced professionals is committed to delivering exceptional results on time and within budget, while maintaining the highest standards of safety and sustainability.
+          &#8226; Our team of experienced professionals is committed to delivering exceptional results on time and within budget, while maintaining the highest standards of safety and sustainability.
 
         </p>
       </div>
       <div className={styles.item}>
         <p className={styles.paragraph}>
-          &#8226; 	We have achieved a great number of praises from our customers at home and abroad, because of high-quality steel materials product and professional services.
+          &#8226; We have achieved a great number of praises from our customers at home and abroad, because of high-quality steel materials product and professional services.
         </p>
       </div>
     </div>      
-    <div className={styles.divider} style={{marginTop:'-1px'}}></div>
 
 
 
@@ -83,15 +82,12 @@ export default function AboutPage() {
     ))}
   </div>
 </div>
-<div className={styles.divider} style={{marginTop:'-1px'}}></div>
 
  {/* Box5 */}
      <Box5 />
-     <div className={styles.divider} style={{marginTop:'-1px'}}></div>
 
      <Box6 />
      <Box7 />
-     <div className={styles.divider} style={{marginTop:'-1px'}}></div>
 
 
 

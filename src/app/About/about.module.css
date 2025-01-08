@@ -117,6 +117,9 @@ line-height: normal;
   }
 
   @media (max-width: 767px) and (min-width: 601px){
+    .box1{
+      height: 40vh;
+    }
     .overlay{
       left:55%;
       width: 100%;
@@ -132,7 +135,9 @@ line-height: normal;
   }
   
   @media (max-width: 600px) {
-    
+    .box1{
+      height: 40vh;
+    }
     .overlay{
       left:50%;
       width: 100%;
@@ -231,7 +236,7 @@ line-height: normal;
      }
   
     .paragraph {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
   
@@ -291,7 +296,7 @@ color: var(--Primary, #1E2E5F);
       font-size: 28px;
     }
     .para1box3,.para2box3{
-      font-size: 14px;
+      font-size: 12px;
     }
   
   }
@@ -511,7 +516,7 @@ color: var(--Primary, #1E2E5F);
      }
  
      .text {
-       font-size: 12px;
+       font-size: 14px;
      }
      
    
@@ -571,7 +576,7 @@ color: var(--Primary, #1E2E5F);
     }
 
     .text {
-      font-size: 10px;
+      font-size: 14px;
     }
     
   

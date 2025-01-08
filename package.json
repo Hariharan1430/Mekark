@@ -8,15 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
-
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.1.10",
-    "next": "15.0.4",
+    "next": "^15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-swipeable": "^7.0.2",
     "swiper": "^11.1.15"
   },
   "devDependencies": {

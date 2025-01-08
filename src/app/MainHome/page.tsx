@@ -2,13 +2,11 @@
 import styles from "./mainHome.module.css"; 
 import arrow from "../../../public/HomeImages/Quote Button Icon.svg"
 import Image from "next/image";
-import Cornerimage1 from "../../../public/HomeImages/wheel2 Back.svg"
-import Cornerimage2 from "../../../public/HomeImages/wheel.svg"
 import Cardimage1 from "../../../public/HomeImages/H4.1.svg"
 import Cardimage2 from "../../../public/HomeImages/H4.2.svg"
 import Cardimage3 from "../../../public/HomeImages/H4.3.svg"
 import Cardimage4 from "../../../public/HomeImages/H4.4.svg"
-import BuildingImage from "../../../public/HomeImages/img-1-5x.png";
+import BuildingImage from "../../../public/HomeImages/Frameimage2.png";
 import Box6 from "./box6"
 import Box7 from "./box7"
 import Box8 from "./box8"
@@ -136,20 +134,16 @@ export default function Home() {
      
       
     </div>
-    <div className={styles.divider} style={{marginTop:'1px'}}></div>
     
       {/* Box6 */}
        <Box6 />
-       <div className={styles.divider} style={{marginTop:'1px'}}></div>
   
        {/* Box7 */}
       <Box7 />
-      <div className={styles.divider}>  </div>
 
        {/* Box8 */}
 
        <Box8 />
-       <div className={styles.divider}  style={{marginTop:'-2px'}}>  </div>
             {/* Box9 */}
              <Box9 /> 
 

@@ -1,12 +1,12 @@
 
 @font-face {
-  font-family: "Public Sans Regular";
-  src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot");
-  src: url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/ee776793214ebf7a55537a2a48fb3eeb.svg#Public Sans Regular")format("svg");
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
 }
 @font-face {
   font-family: "Halyard Display";
@@ -57,10 +57,11 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 margin-bottom: 40px;
+margin-top: -10px;
 }
 .tabBarText{
 text-align: center;
-font-family: "Public Sans Regular";
+font-family: "Halyard Display";
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
@@ -137,7 +138,7 @@ margin-bottom: 15px;
 
 .heading {
 color: var(--secondary, #1D75BD);
-font-family: "Public Sans";
+font-family: "Halyard Display";
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
@@ -179,7 +180,8 @@ height: 100%;
 .description {
 text-align: justify;
 color: var(--Text-Black-Primary, #606062);
-font-family: "Halyard Display";
+
+font-family: "Halyard Display Book";
 font-size: 18px;
 font-style: normal;
 font-weight: 100;
@@ -209,11 +211,18 @@ align-self: flex-start;
 }
 
 .discoverButton:hover {
-background-color:#1D75BD;
+  border: 1px solid var(--Primary, #4B587F);
+
+  background-color:#4B587F;
+  color: #FFF;
+}
+.discoverButton:hover img {
+  filter: brightness(0) invert(1); 
 }
 
 .arrowIcon {
 margin-left: 8px;
+margin-top: 3px;
 width: 14px;
 height: 14px;
 }
@@ -244,9 +253,13 @@ transition: background-color 0.3s, border 0.3s;
 }
 
 .arrowButton:hover {
-background-color: #1D75BD;
-border-color: #007bff;
-color: white;
+  border: 1px solid var(--Primary, #4B587F);
+
+  background-color:#4B587F;
+  color: #FFF;
+}
+.arrowButton:hover img {
+  filter: brightness(0) invert(1); 
 }
 .arrowButton:disabled {
 opacity: 0.5; 
