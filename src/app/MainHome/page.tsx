@@ -6,7 +6,6 @@ import Cardimage1 from "../../../public/HomeImages/H4.1.svg"
 import Cardimage2 from "../../../public/HomeImages/H4.2.svg"
 import Cardimage3 from "../../../public/HomeImages/H4.3.svg"
 import Cardimage4 from "../../../public/HomeImages/H4.4.svg"
-import BuildingImage from "../../../public/HomeImages/Frameimage2.png";
 import Box6 from "./box6"
 import Box7 from "./box7"
 import Box8 from "./box8"
@@ -123,7 +122,7 @@ export default function Home() {
         <p className={styles.mainHeading5}>Manufacturer : Mekark</p>
         <p className={styles.subHeading5}>Pre-engineering Buildings (PEB)</p>
         <div className={styles.imageContainer5}>
-          <Image src={BuildingImage} alt="PEB Design" width={900} height={400} />
+          <Image src="/HomeImages/Frameimage2.png"  alt="PEB Design" width={900} height={400} />
         </div>
         <p className={styles.description5}>
           Mekark has become the leading Pre-engineering Buildings (PEB) Manufacturer in Chennai. With our outstanding experience and expertise team, we stand out from our competitors. Pre-engineered buildings (PEB) are now growing as an advanced option in the construction sector.
