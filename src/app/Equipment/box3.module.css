@@ -50,6 +50,9 @@
     line-height: normal;
     text-transform: uppercase;
       }
+      .tabBar button.activeTab{
+        font-weight: 700; 
+      }
 /* Content Section */
 .content {
   width: 100%;
@@ -330,7 +333,7 @@
     }
   
     .tabBar button {
-      font-size: 12px;
+      font-size: 10px;
       line-height: 1.3;
     }
   

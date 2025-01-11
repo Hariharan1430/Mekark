@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true, // Disable ESLint during builds
   },
-  output: 'export',
   trailingSlash: true,
 };
 

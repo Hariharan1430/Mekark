@@ -55,9 +55,9 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 70%;
-      left: 83%;
-      transform: translate(-50%, -50%);
+      top: 70%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust for width and height */
       color: white;
       padding: 20px;
       border-radius: 8px;
@@ -71,66 +71,42 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: center;
     }
     
    
   
       /* code for Responive box1  design */
   
-    @media (max-width: 1200px) and (min-width: 901px) {
-      .overlay{
-        left: 80%;
+      @media (max-width: 1200px) and (min-width: 901px) {
+        .title {
+          font-size: 48px;
+        }
       }
-    
-      .title {
-        font-size: 48px;
-      }
-    
       
-    }
-  
-    
-    @media (max-width: 900px) and (min-width: 768px) {
+      @media (max-width: 900px) and (min-width: 768px) {
+        .title {
+          font-size: 42px;
+        }
+      }
       
-      .overlay{
-        left: 80%;
+      @media (max-width: 767px) and (min-width: 601px) {
+        .box1 {
+          height: 40vh;
+        }
+        .title {
+          font-size: 28px;
+        }
       }
-    
-      .title {
-        font-size: 42px;
+      
+      @media (max-width: 600px) {
+        .box1 {
+          height: 40vh;
+        }
+        .title {
+          font-size: 28px;
+        }
       }
-
-    }
-  
-    @media (max-width: 767px) and (min-width: 601px){
-      .box1{
-        height: 40vh;
-      }
-      .overlay{
-        left:85%;
-        width: 100%;
-      }
-      .title {
-        font-size: 28px;
-      }
-    
-  
-    }
-    
-    @media (max-width: 600px) {
-      .box1{
-        height: 40vh;
-      }
-      .overlay{
-        left:70%;
-        width: 100%;
-      }
-      .title {
-        font-size: 28px;
-      }
-
-    }
-
         /* Styling for the box2 */
     .box2{
         padding: 20px;
@@ -174,7 +150,7 @@
      @media (max-width: 1300px) and (min-width:901px){
       .title1box2{
         font-size: 32px;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
       }
       .title2box2{
         font-size: 32px;
@@ -190,7 +166,7 @@
      @media (max-width: 900px) and (min-width:768px){
       .title1box2{
         font-size: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
       }
       .title2box2{
         font-size: 24px;
@@ -207,11 +183,11 @@
      @media (max-width: 767px) and (min-width:601px){
       .title1box2{
         font-size: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
       }
       .title2box2{
         font-size: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 10px;
   
       }
       .parabox2{
@@ -223,18 +199,23 @@
     
     
     @media (max-width: 600px) {
+      .box2{
+        padding: 16px;
+      }
     .title1box2{
       font-size: 22px;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     .title2box2{
       font-size: 22px;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
 
     }
     .parabox2{
       max-width: 100%;
       font-size: 14px;
+      line-height: 1.5;
+      
     }
     
     }

@@ -149,7 +149,7 @@ background: var(--secondary, #1D75BD);
 transition: background-color 0.3s ease, transform 0.3s ease;
 border: none;
   
-    padding: 5px 10px;
+    padding: 6px 24px;
   text-align: center;
   font-family: "Halyard Display";
   font-size: 18px;
@@ -335,7 +335,7 @@ line-height: normal;
   align-items: center;
   cursor: pointer;
   border: none;
-  padding: 10px;
+  padding: 7px 24px;
 }
 
 .custombutton2 img {
@@ -345,7 +345,6 @@ line-height: normal;
 }
 
 .custombutton2:hover {
-
   background-color:#4B587F;
   color: #FFF;
 }
@@ -357,6 +356,8 @@ line-height: normal;
  }
 .custombutton2{
   font-size: 15px;
+  padding: 10px;
+
 }
  
   .custombutton2 img {
@@ -379,6 +380,7 @@ line-height: normal;
    }
   .custombutton2{
     font-size: 14px;
+    padding: 10px;
   }
   .custombutton2 img {
     width: 14px;
@@ -392,27 +394,6 @@ line-height: normal;
   position: relative;
   text-align: center;
   border-radius: 8px;
-}
-
-.cornerImage {
-  position: absolute;
-  
-}
-
-.leftCorner {
-  bottom:-6%;
-  left: 2%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: auto;
-}
-
-.rightCorner {
-  top: 32%;
-  right: 8%;
-  transform: translate(50%, -50%);
-  width: 200px;
-  height: auto;
 }
 
 .content3 {
@@ -461,11 +442,7 @@ margin-top: -10px;
     padding: 10px;
   }
 
-  .cornerImage {
-    width: 30px;
-    height: 30px;
-  }
-  
+ 
   .subheading3 {
     font-size: 18px;
   }
@@ -485,10 +462,7 @@ margin-top: -10px;
     padding: 10px;
   }
 
-  .cornerImage {
-    width: 30px;
-    height: 30px;
-  }
+  
   
   .subheading3 {
     font-size: 14px;
@@ -509,11 +483,7 @@ margin-top: -10px;
     padding: 10px;
   }
 
-  .cornerImage {
-    width: 30px;
-    height: 30px;
-  }
-  
+ 
   .subheading3 {
     font-size: 12px;
   }
@@ -527,7 +497,6 @@ margin-top: -10px;
     font-size: 12px;
   }
 }
-
 
 /* CSS Code (Box4.module.css) */
 .box4 {
@@ -566,10 +535,11 @@ margin-top: -10px;
   color: #223872;
 text-align: center;
 font-family: "Halyard Display";
-font-size: 18px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+letter-spacing: 0.7px;
 }
 
 .description4 {
@@ -724,7 +694,7 @@ line-height: normal;
   position: absolute;
   width: 50px;
   height: 50px;
-  background: url('/left-corner.png') no-repeat center center;
+  background: url('/public/HomeImages/wheel.svg') no-repeat center center;
   background-size: contain;
 }
 
@@ -736,7 +706,7 @@ line-height: normal;
 .cornerImageRight {
   top: -10px;
   right: -10px;
-  background: url('/right-corner.png') no-repeat center center;
+  background: url('/public/HomeImages/wheel2\ Back.svg') no-repeat center center;
 }
 
 .content5 {

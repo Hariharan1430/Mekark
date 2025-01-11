@@ -52,6 +52,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s, background-color 0.3s;
+    
     }
     
     .activeTab {
@@ -60,6 +61,7 @@
     border-radius: 50px;
     background: var(--secondary, #1D75BD);
     border: #007bff;
+    
     }
     
     
@@ -75,6 +77,9 @@
       font-weight: 500;
       line-height: normal;
       text-transform: uppercase;
+        }
+        .activeTab .tabBarText {
+          font-weight: 700; 
         }
         .content {
           display: grid;
@@ -101,6 +106,7 @@
     font-weight: 300;
     line-height: 30px; 
   }
+
 
 
   @media (max-width: 1200px) and (min-width: 901px){

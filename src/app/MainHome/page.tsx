@@ -12,6 +12,8 @@ import Box7 from "./box7"
 import Box8 from "./box8"
 import Box9 from "./box9";
 
+
+
 export default function Home() {
 
   return (
@@ -113,7 +115,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className={styles.divider} style={{marginTop:'-1px'}}></div>
+      
     
 
      {/* Box5 */}

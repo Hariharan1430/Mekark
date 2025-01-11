@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+}
+
+  @font-face {
+    font-family: "Halyard Display";
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+  }
+
 .container {
     display: flex;
     justify-content: center;
@@ -86,9 +106,9 @@ margin-bottom:-10px;
     color: var(--Primary, #1E2E5F);
 text-align: center;
 font-family: "Halyard Display";
-font-size: 20px;
+font-size: 26px;
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 line-height: normal;
     margin-bottom: 15px;
   }
@@ -96,7 +116,7 @@ line-height: normal;
   .content {
     color: var(--Text-Black-Primary, #606062);
     text-align: center;
-    font-family: "Halyard Display";
+    font-family: "Halyard Display Book";
     font-size: 20px;
     font-style: normal;
     font-weight: 100;
@@ -122,8 +142,8 @@ line-height: normal;
   }
   
   .arrow img {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
   }
   .arrow:hover {
     border: 1px solid var(--Primary, #4B587F);
@@ -197,11 +217,11 @@ line-height: normal;
       width: 110px;
     }
     .arrow{
-      padding: 0px;
+      padding: 7px;
     }
     .arrow img{
-      width: 22px;
-      height: 22px;
+      width: 15px;
+      height: 15px;
     }
     
   }
@@ -255,11 +275,11 @@ line-height: normal;
     }
 
     .arrow{
-      padding: 0px;
+      padding:  5px;
     }
     .arrow img{
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
     }
     .author::after {
       width: 90px;

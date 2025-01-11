@@ -48,7 +48,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/products">
+              <Link legacyBehavior href="/Product">
                 <a title="View our Products">Products</a>
               </Link>
             </li>
@@ -160,7 +160,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/products">
+              <Link legacyBehavior href="/Product">
                 <a title="View our Products" onClick={closeMenu}>
                   Products
                 </a>

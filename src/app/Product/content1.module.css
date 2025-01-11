@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+}
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.heading {
+  overflow: hidden;
+  color: var(--Primary, #1E2E5F);
+  text-align: center;
+ 
+  text-overflow: ellipsis;
+  font-family: "Halyard Display";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.textBox {
+  border-radius: 8px;
+}
+
+.textBox h2 {
+  color: var(--Primary, #1E2E5F);
+  font-family: "Halyard Display";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.textBox p {
+  color: #000;
+  font-family: "Halyard Display Book";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Second Container */
+.secondContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexBox {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.largeImage {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.textBlock {
+  flex: 1;
+}
+
+.textBlock h2 {
+  color: var(--Primary, #1E2E5F);
+  font-family: "Halyard Display";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+ 
+}
+
+.textBlock p {
+  color: #000;
+  font-family: "Halyard Display Book";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1300px) and (min-width: 901px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .textBox h2,
+  .textBlock h2 {
+    font-size: 24px;
+  }
+
+  .textBox p,
+  .textBlock p {
+    font-size: 18px;
+  }
+  .container {
+  
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+ 
+
+  .flexBox {
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+  }
+
+  .image{
+    max-width: 100%;
+  }
+  .largeImage {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .textBlock {
+    padding: 0px;
+  }
+}
+
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .container {
+  
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .heading {
+    font-size: 26px;
+  }
+
+  .textBox h2,
+  .textBlock h2 {
+    font-size: 22px;
+  }
+
+  
+  .textBlock p {
+    font-size: 16px;
+  }
+  .textBox p{
+    font-size: 16px;
+    margin-bottom: 20px;
+
+  }
+
+  .flexBox {
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+
+  }
+
+  .image{
+    max-width: 100%;
+  }
+  .largeImage {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .textBlock {
+    padding: 0px;
+  }
+}
+
+
+
+@media (max-width: 767px) and (min-width: 601px) {
+  .container {
+  
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .heading {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .textBox h2,
+  .textBlock h2 {
+    font-size: 18px;
+  }
+
+  .textBox p{
+    font-size: 14px;
+    margin-bottom: 10px;
+
+  }
+  .textBlock p{
+    font-size: 14px;
+
+  }
+
+  .flexBox {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .image{
+    max-width: 100%;
+  }
+  .largeImage {
+    max-width: 100%;
+    margin-bottom: 17px;
+  }
+  .textBlock {
+    padding: 0px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+  
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .heading {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .textBox h2,
+  .textBlock h2 {
+    font-size: 18px;
+  }
+
+  .textBlock p {
+    font-size: 14px;
+
+  }
+  .textBox p{
+    font-size: 14px;
+    margin-bottom: 10px;
+
+  }
+
+  .flexBox {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .image{
+    max-width: 100%;
+  }
+  .largeImage {
+    max-width: 100%;
+    margin-bottom: 17px;
+  }
+  .textBlock {
+    padding: 0px;
+  }
+}
+
