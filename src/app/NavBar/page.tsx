@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/contact">
+              <Link legacyBehavior href="/Contact">
                 <a title="Contact Us">Contact</a>
               </Link>
             </li>
@@ -188,7 +188,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/contact">
+              <Link legacyBehavior href="/Contact">
                 <a title="Contact Us" onClick={closeMenu}>
                   Contact
                 </a>

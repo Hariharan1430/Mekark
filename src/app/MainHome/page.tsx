@@ -63,19 +63,18 @@ export default function Home() {
 </div> 
 
      {/* Box3 */}
-  <div className={styles.box3}>
-   
-      <div className={styles.content3}>
-        <p className={styles.subheading3}>Why Choose Mekark for</p>
-        <p className={styles.heading3}>PEB Manufacturer?</p>
-        <p className={styles.description3}>
-          Mekark is a company that specializes in designing, manufacturing and constructing
-          pre-engineered buildings for various industries.
-        </p>
-      </div>
-   
-    </div> 
-    
+     <div className={styles.box3}>
+  <div className={styles.content3}>
+    <p className={styles.subheading3}>Why Choose Mekark for</p>
+    <p className={styles.heading3}>PEB Manufacturer?</p>
+    <p className={styles.description3}>
+      Mekark is a company that specializes in designing, manufacturing and constructing
+      pre-engineered buildings for various industries.
+    </p>
+  </div>
+  <div className={styles["gear-top-left"]}></div>
+  <div className={styles["gear-bottom-right"]}></div>
+</div>
      {/* Box4 */}
       <div className={styles.box4}>
         <div className={styles.card4}>
@@ -115,6 +114,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className={styles.divider}></div>
+
       
     
 
@@ -132,6 +133,9 @@ export default function Home() {
         </p>
         <button className={styles.readMoreButton5}>Read more</button>
       </div>
+      <div className={styles["gear-top-left1"]}></div>
+      <div className={styles["gear-bottom-right1"]}></div>
+
       <div className={styles.cornerImageRight}></div>
      
       

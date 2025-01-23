@@ -25,7 +25,7 @@ const testimonials = [
       "The team delivered a world-class car park system for our limited space. It saved our business time and energy. Great work!",
     author: "Susan - Business Owner",
   },
-];
+]; 
 
 const TestimonialBox = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,0 +1,393 @@
+@font-face {
+    font-family: "Halyard Display Book";
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+  }
+  
+    @font-face {
+      font-family: "Halyard Display";
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+      src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+      url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    /* Styling for the box1 */
+  .box1 {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      background-image: url('../../../public/Contactimages/Banner-contact\ us-75.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .overlay {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust for width and height */
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%; 
+    }
+    
+    .title {
+      color: #FFF;
+      font-family: "Inter";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+    }
+    
+   
+  
+      /* code for Responive box1  design */
+  
+      @media (max-width: 1200px) and (min-width: 901px) {
+        .title {
+          font-size: 48px;
+        }
+      }
+      
+      @media (max-width: 900px) and (min-width: 768px) {
+        .title {
+          font-size: 42px;
+        }
+      }
+      
+      @media (max-width: 767px) and (min-width: 601px) {
+        .box1 {
+          height: 40vh;
+        }
+        .title {
+          font-size: 28px;
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .box1 {
+          height: 40vh;
+        }
+        .title {
+          font-size: 28px;
+        }
+      }
+
+
+
+
+      /*   Box2  design    */
+
+      .box2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the form horizontally */
+        gap: 50px;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      
+      
+      /* Contact Form */  
+      .container1 {
+        width: 40%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto; /* Center the form horizontally */
+      }
+      
+      /* Heading styles */
+      .heading {
+        font-family: "Halyard Display";
+        color:  #1E2E5F;
+        text-align: center;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      
+      /* Subheading styles */
+      .subheading {
+        color: #1B2128;
+        text-align: center;
+        font-family: "Halyard Display Book";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 40px;
+        word-spacing: 3px;
+      }
+      
+      /* Form container styles */
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      /* Form group for each input/textarea */
+      .formGroup {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Label styles */
+      .label {
+        color: var(--Primary, #1E2E5F);
+        font-family: "Halyard Display";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      
+      /* General text field and textarea styles */
+      .textfield,
+      .textarea {
+        width: 100%;
+        padding: 15px;
+        font-family: "Halyard Display Book";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        border: 1px solid #dcdfe6;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        outline: none;
+        transition: border 0.3s ease-in-out;
+        color: #667085;
+        word-spacing: 2px;
+
+      }
+      
+      .textfield:focus,
+      .textarea:focus {
+        border-color: #1f2b6c;
+      }
+      
+      /* Textarea-specific styles */
+      .textarea {
+        height: 100px;
+        resize: none;
+      }
+      
+      /* Submit button styles */
+      .submitButton {
+        width: 20%;
+        margin: 0 auto; /* Centers the button horizontally */
+        padding: 10px;
+        font-family: "Halyard Display";
+        font-size: 20px;
+       font-weight: 400;
+        color: #ffffff;
+        background-color: #1E2E5F;
+        border: 1px solid var(--Primary, #1E2E5F);
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+       
+
+      }
+      
+      .submitButton:hover {
+        border: 1px solid var(--Primary, #4B587F);
+        background-color:#4B587F;
+        color: #FFF;
+      }
+      
+      /* Styles for the phone field container */
+      .phoneField {
+        display: flex;
+        align-items: center;
+        border: 1px solid #dcdfe6;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        overflow: hidden;
+        transition: border 0.3s ease-in-out;
+        color: #667085;
+        word-spacing: 2px;
+        font-family: "Halyard Display Book";
+        font-size: 18px;
+
+
+      }
+      
+      .phoneField:focus-within {
+        border-color: #1f2b6c;
+      }
+      
+      /* Country code dropdown styles */
+      .countryCode {
+        background-color: #f8f9fa;
+        border: none;
+        padding: 15px;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        border-right: 1px solid #dcdfe6;
+        border-radius: 5px 0 0 5px;
+        color: #667085;
+        word-spacing: 2px;
+        font-family: "Halyard Display Book";
+        font-size: 18px;
+      }
+      
+      /* Phone input styles */
+      .phoneInput {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-radius: 0 5px 5px 0;
+        color: #667085;
+        word-spacing: 2px;
+        font-family: "Halyard Display Book";
+        font-size: 18px;
+      }
+      
+      .phoneInput:focus {
+        outline: none;
+      }
+      .mapContainer {
+        width: 100%; /* Full width for the map */
+      }
+      
+      .mapContainer iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 8px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1300px) {
+        .container1 {
+          width: 60%;
+          padding: 20px;
+        }
+      
+        .heading {
+          font-size: 32px;
+        }
+      
+        .subheading {
+          font-size: 18px;
+        }
+      
+        .textfield,
+        .textarea,
+        .countryCode,
+        .phoneInput {
+          padding: 12px;
+          font-size: 18px;
+        }
+      
+        .submitButton {
+          width: 30%;
+          padding: 12px;
+          font-size: 18px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .container1 {
+          width: 80%;
+          padding: 15px;
+        }
+      
+        .heading {
+          font-size: 28px;
+        }
+      
+        .subheading {
+          font-size: 16px;
+        }
+      
+        .textfield,
+        .textarea,
+        .countryCode,
+        .phoneInput {
+          padding: 10px;
+          font-size: 16px;
+        }
+      
+        .submitButton {
+          width: 30%;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .container1 {
+          width: 100%;
+          padding: 15px 20px;
+        }
+      
+        .heading {
+          font-size: 22px;
+        }
+      
+        .subheading {
+          font-size: 14px;
+        }
+      
+        .textfield,
+        .textarea,
+        .countryCode,
+        .phoneInput {
+          padding: 8px;
+          font-size: 12px;
+        }
+      
+        .submitButton {
+          width: 30%;
+          padding: 10px;
+          font-size: 14px;
+        }
+        
+        .mapContainer iframe{
+          height: 250px;
+        }
+
+
+      }

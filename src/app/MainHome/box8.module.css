@@ -32,7 +32,7 @@
     width: 100%;
     max-width: 1000px;
     border-radius: 12px;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     box-sizing: border-box;
   }
@@ -226,7 +226,7 @@ line-height: normal;
     
   }
   
-  @media (max-width: 480px) {  
+  @media (max-width: 480px) and (min-width:351px) {  
     .container{
       padding: 10px;
     }
@@ -249,7 +249,7 @@ line-height: normal;
     }
   
     .subHeading {
-      font-size: 12px;
+      font-size: 14px;
     }
   
     .title {
@@ -287,4 +287,64 @@ line-height: normal;
   
    
   }
+  @media (max-width: 350px) {  
+    .container{
+      padding: 10px;
+    }
+    .box8{
+      padding: 10px 20px;
+    }
+    .imageBox{
+      margin-bottom: -30px;
+
+    }
+    .mainHeading {
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+
+    }
   
+    .testimonialBox {
+      gap: 5px;
+      padding: 1px;
+    }
+  
+    .subHeading {
+      font-size: 14px;
+    }
+  
+    .title {
+      font-size: 14px;
+    }
+  
+    .content {
+      font-size: 12px;
+    }
+  
+    .author {
+      font-size: 14px;
+    }
+  
+    .imageBorder {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .profileImage {
+      width: 60px;
+      height: 60px;
+    }
+
+    .arrow{
+      padding:  5px;
+    }
+    .arrow img{
+      width: 15px;
+      height: 15px;
+    }
+    .author::after {
+      width: 90px;
+    }
+  
+   
+  }

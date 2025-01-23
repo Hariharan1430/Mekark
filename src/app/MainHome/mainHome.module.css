@@ -393,11 +393,11 @@ line-height: normal;
 .box3 {
   position: relative;
   text-align: center;
-  border-radius: 8px;
+  width: 100%;
 }
 
 .content3 {
-  padding: 20px 20px 30px 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -406,28 +406,27 @@ line-height: normal;
 
 .subheading3 {
   color: #1C75BC;
-text-align: center;
-font-family: "Halyard Display";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .heading3 {
-color: #1E2E5F;
-text-align: center;
-font-family: "Halyard Display";
-font-size: 48px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: -10px;
+  color: #1E2E5F;
+  text-align: center;
+  font-family: "Halyard Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -10px;
 }
 
 .description3 {
-  max-width: 55%;
+  max-width: 43%;
   color: #1E2E5F;
   text-align: center;
   font-family: "Halyard Display Book";
@@ -437,12 +436,35 @@ margin-top: -10px;
   line-height: normal;
 }
 
-@media (min-width: 901px) and (max-width: 1100px){
+/* Gear images */
+.gear-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height:200px ;
+  background-image: url('../../../public/HomeImages/wheel2\ Back.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gear-bottom-right {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 250px;
+  height:400px ;
+  background-image: url('../../../public/HomeImages/wheel.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: 901px) and (max-width: 1100px) {
   .box3 {
     padding: 10px;
   }
 
- 
   .subheading3 {
     font-size: 18px;
   }
@@ -455,15 +477,22 @@ margin-top: -10px;
     max-width: 70%;
     font-size: 18px;
   }
+  .gear-top-left {
+    width: 130px;
+    height: 170px;
+  }
+  .gear-bottom-right{
+    width: 150px;
+    height: 200px;
 
+  }
 }
-@media (min-width: 481px) and (max-width: 900px){
+
+@media (min-width: 481px) and (max-width: 900px) {
   .box3 {
     padding: 10px;
   }
 
-  
-  
   .subheading3 {
     font-size: 14px;
   }
@@ -477,15 +506,28 @@ margin-top: -10px;
     font-size: 14px;
   }
 
+  .gear-top-left {
+    width: 100px;
+    height: 100px;
+  }
+  .gear-bottom-right{
+    width: 140px;
+    height: 160px;
+
+  }
 }
+
 @media (max-width: 480px) {
   .box3 {
-    padding: 10px;
+    padding: 5px;
+  }
+  .content3{
+    padding: 20px;
   }
 
- 
   .subheading3 {
-    font-size: 12px;
+    font-size: 14px;
+    margin-bottom: 5px;
   }
 
   .heading3 {
@@ -493,8 +535,18 @@ margin-top: -10px;
   }
 
   .description3 {
-    max-width: 100%;
+    max-width: 80%;
     font-size: 12px;
+  }
+
+  .gear-top-left {
+    width: 90px;
+    height: 90px;
+  }
+  .gear-bottom-right{
+    width: 120px;
+    height: 140px;
+
   }
 }
 
@@ -507,6 +559,7 @@ margin-top: -10px;
   padding: 20px;
   gap: 40px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .card4 {
@@ -646,6 +699,7 @@ line-height: normal;
 @media (max-width: 480px) {
   .box4{
     padding: 10px 20px 20px 20px;
+    margin-bottom: 5px;
   }
   .card4 {
     gap: 5px;
@@ -680,34 +734,48 @@ line-height: normal;
 
 
 /* CSS Code (Box5.module.css) */
+
 .box5 {
   width: 100%;
   position: relative;
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
-.cornerImageLeft,
-.cornerImageRight {
+.gear-top-left1 {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background: url('/public/HomeImages/wheel.svg') no-repeat center center;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height:500px ;
+  background-image: url('../../../public/HomeImages/framesideimage1.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.cornerImageLeft {
-  top: -10px;
-  left: -10px;
+.gear-bottom-right1 {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 150px;
+  height:150px ;
+  background-image: url('../../../public/HomeImages/framesideimage2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotateGear 3s linear infinite; /* Adjust timing (2s) as needed */
+  transform-origin: center;
+}
+@keyframes rotateGear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.cornerImageRight {
-  top: -10px;
-  right: -10px;
-  background: url('/public/HomeImages/wheel2\ Back.svg') no-repeat center center;
-}
 
 .content5 {
   display: flex;
@@ -746,7 +814,7 @@ line-height: normal;
 
 .description5 {
 
- max-width: 70%;
+ max-width: 60%;
   color: var(--Primary, #1E2E5F);
 text-align: center;
 font-family: "Halyard Display";
@@ -754,13 +822,13 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-margin-bottom: 2%;
+margin-bottom: 1%;
  
 }
 
 .readMoreButton5 {
   background-color: #fff;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 50px;
   border: 1px solid var(--Primary, #1E2E5F);
   color: var(--Primary, #1E2E5F);
@@ -779,12 +847,7 @@ margin-bottom: 3%;
   background-color:#4B587F;
   color: #FFF;
 }
-.divider {
-  width: 100%;
-  height: 1px;
-  background-color: #B6BBCB;
-  margin-top: 20px;
-}
+
 @media  (min-width: 901px) and (max-width: 1100px) {
   .box5 {
     padding: 15px;
@@ -809,6 +872,10 @@ margin-bottom: 3%;
   }
   .readMoreButton5{
     font-size: 18px;
+  }.gear-bottom-right1,
+  .gear-top-left1
+  {
+    display: none;
   }
   
 }
@@ -838,7 +905,11 @@ margin-bottom: 3%;
   .readMoreButton5{
     font-size: 14px;
   }
-  
+  .gear-bottom-right1,
+  .gear-top-left1
+  {
+    display: none;
+  }
 }
 
 @media  (min-width: 481px) and (max-width: 767px) {
@@ -868,16 +939,21 @@ margin-bottom: 3%;
     padding: 5px 15px;
 
   }
+  .gear-bottom-right1,
+  .gear-top-left1
+  {
+    display: none;
+  }
   
 }
 
 @media (max-width: 480px) {
   .box5 {
-    padding: 15px;
+    padding: 20px;
   }
 
   .mainHeading5 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .subHeading5 {
@@ -896,6 +972,11 @@ margin-bottom: 3%;
   .readMoreButton5{
     font-size: 12px;
     padding: 5px 15px;
+  }
+  .gear-bottom-right1,
+  .gear-top-left1
+  {
+    display: none;
   }
 }
 

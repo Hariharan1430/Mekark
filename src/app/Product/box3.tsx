@@ -5,6 +5,8 @@ import Right from '../../../public/Productimages/RightArrow.svg';
 import Left from '../../../public/Productimages/LeftArrow.svg';
 import Image from 'next/image';
 import ContentBox1 from './content1';
+import ContentBox2 from './content2';
+
 
 
 const TabBar: React.FC = () => {
@@ -27,9 +29,9 @@ const TabBar: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const getTabsToShow = () => {
-    if (window.innerWidth <= 600) return 2; // Show 2 tabs on mobile
-    if (window.innerWidth <= 1343) return 3; // Show 3 tabs on tablets
-    return 5; // Default to 5 tabs on desktop
+    if (window.innerWidth <= 600) return 2; 
+    if (window.innerWidth <= 1343) return 3; 
+    return 5; 
   };
 
   const [tabsToShow, setTabsToShow] = useState(getTabsToShow());
@@ -89,6 +91,8 @@ const TabBar: React.FC = () => {
 
       {/* Content Box */}
       {activeTab === 0 && <ContentBox1 />}
+      {activeTab === 1 && <ContentBox2 />}
+
     </div>
   );
 };

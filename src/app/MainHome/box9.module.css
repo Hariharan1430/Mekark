@@ -68,14 +68,13 @@ margin-bottom: 10px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    margin-bottom: 30px;
+    margin-bottom: 7%;
   }
   
   
   /* Gallery Container */
   .galleryContainer {
-    
-    display: grid;
+     display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 columns */
       gap: 50px;
   }
@@ -97,7 +96,6 @@ margin-bottom: 10px;
     position: relative;
     width: 100%;
     margin-bottom: 20px;
-
     background: url('../../../public/HomeImages/Frame.svg') no-repeat center center;
     background-size: contain; 
     display: flex;
@@ -312,6 +310,9 @@ line-height: normal;
       }
     }
     @media (max-width: 600px) and (min-width:451px){
+      .box9Container{
+        margin: 20px;
+      }
       .paragraph1{
         margin-bottom: 10px;
        }
@@ -321,8 +322,11 @@ line-height: normal;
       .subHeading{
         font-size: 22px;
       }
-      .mainHeading,.paragraph,.paragraph1,.title,.date,.description{
+      .paragraph,.paragraph1,.title,.date,.description{
         font-size: 12px;
+      }
+      .mainHeading{
+        font-size: 13px;
       }
       .discoverButton{
         font-size: 12px;
@@ -345,6 +349,9 @@ line-height: normal;
       
     }
     @media (max-width: 450px) {
+      .box9Container{
+        margin: 20px;
+      }
       .paragraph1{
         margin-bottom: 10px;
        }
@@ -358,6 +365,10 @@ line-height: normal;
       .mainHeading,.paragraph,.paragraph1,.title,.date,.description{
         font-size: 12px;
       }
+      .mainHeading{
+        font-size: 13px;
+      }
+      
       .discoverButton{
         font-size: 12px;
       }
@@ -373,9 +384,7 @@ line-height: normal;
       .galleryItem{
         width: 300px;
       }
-      
-
-
+    
       .galleryContainer {
         grid-template-columns: repeat(1, 1fr); 
       }
