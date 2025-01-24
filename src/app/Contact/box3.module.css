@@ -1,65 +1,82 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+
 .mainContainer {
   display: flex;
   justify-content: center;
   background-color: #122355;
   color: white;
-  padding: 40px 20px;
-  border-radius: 8px;
+  padding: 50px 20px;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in the width */
-  gap: 50px;
+  box-sizing: border-box; 
+  margin-bottom: 20px;
 }
 
 .imageContainer {
-  width: 50%; /* Takes larger width compared to other containers */
+  width: 30%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/Contactimages/contactimage2.png'); /* Add your local image here */
-  background-size: cover;
+  background-image: url('/Contactimages/contactimage2.png'); 
   background-position: center;
   height: 250px;
-  width: 411px;
-  border-radius: 8px;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9; 
 }
 
-/* Combined Wrapper for Contact Info and Contact Details */
 .detailsContainer {
-  width: 50%; /* Take up the remaining width */
+  width: 50%; 
   display: flex;
-  flex-direction:row;
-  gap: 15px; /* Reduced gap between contactInfo and contactDetails */
+  flex-direction: row;
+  align-items: center;
 }
 
 .contactInfoContainer {
-  width: 100%; /* Full width of the wrapper */
-  background-color: #1a2b5d;
+  width: 100%; 
   padding: 15px;
-  border-radius: 8px;
 }
 
 .contactDetailsContainer {
-  width: 100%; /* Full width of the wrapper */
-  background-color: #1a2b5d;
+  width: 100%;
   padding: 15px;
-  border-radius: 8px;
 }
 
 .heading {
-  font-size: 20px;
-  font-weight: bold;
+  font-family: "Halyard Display";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 15px;
   padding-bottom: 5px;
+}
+.heading2{
+  font-family: "Halyard Display";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: #122355;
 }
 
 .infoRow,
 .detailsRow {
+  font-family: "Halyard Display Book";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  gap: 10px; /* Gap between the icon and text */
+  gap: 10px; 
   position: relative;
-  width: 80%;
 }
 
 .icon {
@@ -68,69 +85,296 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .mainContainer {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 30px; /* Reduce gap between containers on tablets */
-  }
 
+@media (max-width: 1400px) and (min-width:901px){
+  .mainContainer{
+    justify-content: space-evenly;
+  }
   .imageContainer {
-    width: 45%; /* Slightly smaller image width for tablets */
-    height: 150px;
+    width: 30%; 
+    height: 200px;
+    background-size: contain; 
   }
 
   .detailsContainer {
-    width: 55%; /* Slightly wider details container */
+    width: 50%; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 30px; 
+  }
+
+  .contactInfoContainer {
+    padding: 10px;
+  }
+
+  .contactDetailsContainer {
+    padding: 10px;
+  }
+
+  .heading,
+  .heading2 {
+    font-size: 30px; 
+    margin-bottom: 10px;
+  }
+
+  .infoRow,
+  .detailsRow {
+    font-size: 18px;
+    margin-bottom: 8px;
+    gap: 8px; 
   }
 
   .icon {
-    width: 16px;
-    height: 16px;
+    width: 18px; 
+    height: 18px; 
+  }
+  
+
+}
+@media (max-width: 900px) and (min-width:701px){
+  .mainContainer {
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    justify-content: space-evenly;
   }
 
-  .heading {
-    font-size: 18px;
+  .imageContainer {
+    width: 30%;
+    height: 200px; 
+    background-size: contain; 
   }
+
+  .detailsContainer {
+    width: 60%; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 30px; 
+  }
+
+  .contactInfoContainer {
+    padding: 10px;
+  }
+
+  .contactDetailsContainer {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .heading,
+  .heading2 {
+    font-size: 28px; 
+    margin-bottom: 10px;
+  }
+
+  .infoRow,
+  .detailsRow {
+    font-size: 16px;
+    margin-bottom: 8px;
+    gap: 8px; 
+  }
+
+  .icon {
+    width: 18px; 
+    height: 18px;
+  }
+  
+
+}
+@media (max-width: 700px) and (min-width:601px){
+  .mainContainer{
+    padding: 10px 30px;
+  }
+ 
+  .imageContainer {
+    display: none;
+    }
+    
+  .detailsContainer {
+    flex-direction: column;
+    width: 80%; 
+    gap: 1px; 
+  }
+    .contactInfoContainer,
+    .contactDetailsContainer {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .heading {
+      font-size: 22px;
+      text-align: center; 
+    }
+  
+    .infoRow
+    {
+      justify-content: flex-start; 
+      padding-left: 0;
+      margin-bottom: 8px;
+      font-size: 14px;
+      width: 95%;
+  
+   }
+   .detailsRow
+    {
+      justify-content:  flex-start; 
+      padding-left: 0;
+      margin-bottom: 8px;
+      font-size: 14px;
+  
+   }
+   
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .infoRow:first-of-type .heading {
+      text-align: center; 
+    }
+    .contactDetailsContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 5px; 
+    }
+    .heading2{
+      display: none;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) and (min-width:351px) {
   .mainContainer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px; /* Adjust gap for stacked containers */
+    gap: 1px; 
+    padding: 5px 20px ;
   }
 
   .imageContainer {
-    width: 80%; /* Full-width image container for mobile */
-    height: 150px;
+  display: none;
   }
 
+  
+
   .detailsContainer {
-    width: 90%; /* Full-width for details container */
-    gap: 10px; /* Reduced gap between inner sections */
+    flex-direction: column;
+    width: 100%; 
+    gap: 1px; 
   }
 
   .contactInfoContainer,
   .contactDetailsContainer {
     width: 100%;
-    text-align: left; /* Align text left for better readability */
-  }
-
-  .infoRow,
-  .detailsRow {
-    justify-content: flex-start; /* Align icons and text in the same line */
-    padding-left: 0;
-    margin-bottom: 8px;
-  }
-
-  .icon {
-    width: 14px;
-    height: 14px;
+    text-align: left;
   }
 
   .heading {
-    font-size: 16px;
+    font-size: 22px;
+    text-align: center; 
   }
+
+  .infoRow
+  {
+    justify-content: flex-start; 
+    padding-left: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    width: 95%;
+
+ }
+ .detailsRow
+  {
+    justify-content:  flex-start; 
+    padding-left: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+
+ }
+ 
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .infoRow:first-of-type .heading {
+    text-align: center; 
+  }
+  .contactDetailsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5px; 
+  }
+  .heading2{
+    display: none;
+  }
+}
+@media (max-width: 350px){
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1px; 
+    padding: 5px 20px ;
+  }
+
+  .imageContainer {
+  display: none;
+  }
+
+  
+
+  .detailsContainer {
+    flex-direction: column;
+    width: 100%; 
+    gap: 1px; 
+  }
+
+  .contactInfoContainer,
+  .contactDetailsContainer {
+    width: 100%;
+    text-align: left;
+  }
+
+  .heading {
+    font-size: 22px;
+    text-align: center; 
+  }
+
+  .infoRow
+  {
+    justify-content: flex-start; 
+    padding-left: 0;
+    margin-bottom: 8px;
+    font-size: 12px;
+    width: 95%;
+
+ }
+ .detailsRow
+  {
+    justify-content:  flex-start; 
+    padding-left: 0;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+ }
+ 
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .infoRow:first-of-type .heading {
+    text-align: center; 
+  }
+  .contactDetailsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5px;
+    padding: 5px;
+  }
+  .heading2{
+    display: none;
+  }
+  
+
 }

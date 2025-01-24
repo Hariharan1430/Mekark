@@ -17,7 +17,7 @@ const ContactBox3 = () => {
       <div className={styles.detailsContainer}>
         {/* Contact Info */}
         <div className={styles.contactInfoContainer}>
-          <p className={styles.heading}>Contact Info</p>
+          <p className={styles.heading}>Contact Info.</p>
           <div className={styles.infoRow}>
             <Image
               src={icon1}
@@ -26,7 +26,7 @@ const ContactBox3 = () => {
               height={20}
               className={styles.icon}
             />
-            <p>15, 62nd street, Ashok Nagar, Chennai - 600083</p>
+            <p>15, 62nd street, Ashok Nagar, <br></br>Chennai - 600083</p>
           </div>
           <div className={styles.infoRow}>
             <Image
@@ -42,6 +42,8 @@ const ContactBox3 = () => {
 
         {/* Contact Details */}
         <div className={styles.contactDetailsContainer}>
+        <p className={styles.heading2}>Contact Info.</p>
+
           <div className={styles.detailsRow}>
             <Image
               src={icon2}

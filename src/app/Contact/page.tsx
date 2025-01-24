@@ -83,6 +83,7 @@ const Contactpage: React.FC = () => {
       </div>
     </div>
       {/* Box3 */}
+      <Box3 />
     </div>
   );
 };
