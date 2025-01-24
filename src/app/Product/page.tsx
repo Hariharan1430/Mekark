@@ -3,6 +3,7 @@ import React from 'react'
 import styles from "./product.module.css"
 import TabBar from './box3'
 import IconBox from './iconbox'
+import Gallery from '../Equipment/gallery'
 
 
 const Productpage = () => {
@@ -29,6 +30,7 @@ Parking system Manufacturer and Warehouse shed Constructions
 
       <TabBar />
       <IconBox />
+      <Gallery />
 
       </div>
   )
