@@ -23,21 +23,25 @@
   border-radius: 8px;
 }
 
-.contactInfoContainer {
-  width: 25%; /* Smaller width compared to image container */
+/* Combined Wrapper for Contact Info and Contact Details */
+.detailsContainer {
+  width: 50%; /* Take up the remaining width */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
+  flex-direction:row;
+  gap: 15px; /* Reduced gap between contactInfo and contactDetails */
+}
+
+.contactInfoContainer {
+  width: 100%; /* Full width of the wrapper */
+  background-color: #1a2b5d;
+  padding: 15px;
   border-radius: 8px;
 }
 
 .contactDetailsContainer {
-  width: 25%; /* Matches contact info width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
+  width: 100%; /* Full width of the wrapper */
+  background-color: #1a2b5d;
+  padding: 15px;
   border-radius: 8px;
 }
 
@@ -76,9 +80,8 @@
     height: 150px;
   }
 
-  .contactInfoContainer,
-  .contactDetailsContainer {
-    width: 25%; /* Ensure consistent sizing for info and details containers */
+  .detailsContainer {
+    width: 55%; /* Slightly wider details container */
   }
 
   .icon {
@@ -104,9 +107,14 @@
     height: 150px;
   }
 
+  .detailsContainer {
+    width: 90%; /* Full-width for details container */
+    gap: 10px; /* Reduced gap between inner sections */
+  }
+
   .contactInfoContainer,
   .contactDetailsContainer {
-    width: 90%; /* Full-width for both containers */
+    width: 100%;
     text-align: left; /* Align text left for better readability */
   }
 
