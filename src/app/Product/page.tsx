@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react'
 import styles from "./product.module.css"
 import TabBar from './box3'
