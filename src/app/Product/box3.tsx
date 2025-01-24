@@ -1,13 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './box3.module.css';
 import Right from '../../../public/Productimages/RightArrow.svg';
 import Left from '../../../public/Productimages/LeftArrow.svg';
 import Image from 'next/image';
 import ContentBox1 from './content1';
 import ContentBox2 from './content2';
-
-
 
 const TabBar: React.FC = () => {
   const tabs = [
@@ -27,19 +25,23 @@ const TabBar: React.FC = () => {
 
   const [visibleStart, setVisibleStart] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
+  const [tabsToShow, setTabsToShow] = useState(5); // Default value for tabs to show
 
   const getTabsToShow = () => {
-    if (window.innerWidth <= 600) return 2; 
-    if (window.innerWidth <= 1343) return 3; 
-    return 5; 
+    if (typeof window === 'undefined') return 5; // Default value for SSR
+    if (window.innerWidth <= 600) return 2;
+    if (window.innerWidth <= 1343) return 3;
+    return 5;
   };
 
-  const [tabsToShow, setTabsToShow] = useState(getTabsToShow());
-
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setTabsToShow(getTabsToShow());
     };
+
+    // Set initial value on client-side mount
+    setTabsToShow(getTabsToShow());
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -92,11 +94,8 @@ const TabBar: React.FC = () => {
       {/* Content Box */}
       {activeTab === 0 && <ContentBox1 />}
       {activeTab === 1 && <ContentBox2 />}
-
     </div>
   );
 };
-
-
 
 export default TabBar;
