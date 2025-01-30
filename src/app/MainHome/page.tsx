@@ -11,10 +11,35 @@ import Box6 from "./box6"
 import Box7 from "./box7"
 import Box8 from "./box8"
 import Box9 from "./box9";
-
+import { useRouter } from 'next/navigation'; 
+import { useState } from "react";
 
 
 export default function Home() {
+  const router = useRouter();
+
+  const navigateToProductPage = () => {
+    if (router) {
+      router.push('/Product'); 
+    } else {
+      console.error('Router is not mounted yet.');
+    }
+  };
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleOpenPopup = () => {
+    setIsPopupVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleContent = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <div className={styles.container}>
@@ -40,27 +65,69 @@ export default function Home() {
             <p className={styles.description11}>
              constructor for your next project
           </p>
-          <button className={styles.productbutton}>
-      Our Product
-      <Image src={arrow} alt="arrow" />
-    </button>
+          <button 
+              className={styles.productbutton} 
+              onClick={navigateToProductPage}
+            >
+              Our Product
+              <Image src={arrow} alt="productbutton" />
+            </button>
         </div>
       </div>
     </div>
 
      {/* Box2 */}
-       <div className={styles.box2}>
-
-  <div className={styles.textdiv2}>
-    <p>Fast And Reliable Service For Your Project Or A Quick Fix, We Do It All!</p>
+     <div className={styles.box2}>
+        <div className={styles.textdiv2}>
+          <p>Fast And Reliable Service For Your Project Or A Quick Fix, We Do It All!</p>
+        </div>
+        <div className={styles.buttondiv2}>
+          <button className={styles.custombutton2} onClick={handleOpenPopup}>
+            Get Quote
+            <Image src={arrow} alt="arrow" />
+          </button>
+        </div>
+      </div>
+       {/* Popup */}
+       {isPopupVisible && (
+  <div className={styles.popupOverlay}>
+    <div className={styles.popupBox}>
+      <button className={styles.closeButton} onClick={handleClosePopup}>
+        &times;
+      </button>
+      <p>Get Your Custom Quote Today!</p>
+      <form className={styles.popupForm}>
+        <select className={styles.inputField}>
+          <option value="">Select product</option>
+          <option value="product1">Product 1</option>
+          <option value="product2">Product 2</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Name"
+          className={styles.inputField}
+        />
+        <input
+          type="text"
+          placeholder="Phone Number"
+          className={styles.inputField}
+        />
+        <input
+          type="email"
+          placeholder="E-mail Ex  abcd @xmail.com"
+          className={styles.inputField}
+        />
+        <textarea
+          placeholder="Message"
+          className={styles.inputField}
+        ></textarea>
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+      </form>
+    </div>
   </div>
-  <div className={styles.buttondiv2}>
-    <button className={styles.custombutton2}>
-      Get Quote
-      <Image src={arrow} alt="arrow" />
-    </button>
-  </div>
-</div> 
+)}
 
      {/* Box3 */}
      <div className={styles.box3}>
@@ -120,25 +187,29 @@ export default function Home() {
     
 
      {/* Box5 */}
-         <div className={styles.box5}>
+     <div className={styles.box5}>
       <div className={styles.cornerImageLeft}></div>
       <div className={styles.content5}>
         <p className={styles.mainHeading5}>Manufacturer : Mekark</p>
         <p className={styles.subHeading5}>Pre-engineering Buildings (PEB)</p>
         <div className={styles.imageContainer5}>
-          <Image src={BuildingImage}  alt="PEB Design" width={900} height={400} />
+        <Image src={BuildingImage} alt="PEB Design" width={900} height={400} />
         </div>
         <p className={styles.description5}>
-          Mekark has become the leading Pre-engineering Buildings (PEB) Manufacturer in Chennai. With our outstanding experience and expertise team, we stand out from our competitors. Pre-engineered buildings (PEB) are now growing as an advanced option in the construction sector.
+        Mekark has become the leading Pre-engineering Buildings (PEB) Manufacturer in Chennai. With our outstanding experience and expertise team, we stand out from our competitors. Pre-engineered buildings (PEB) are now growing as an advanced option in the construction sector. 
+          {isExpanded && (
+            <>
+              Mekark specializes in the manufacture of Multi-storey steel building. We are also proficient in space frame construction and Civil construction services. Mekark maintains an amazing history of completed projects in warehouse sheds, industrial sheds, factory buildings and Industrial enclosures. Our MEP services involve these essential system installations because Mechanical, electrical and plumbing (MEP) systems are vital components of any building. Mekark is your ideal partner for all your construction needs.
+            </>
+          )}
         </p>
-        <button className={styles.readMoreButton5}>Read more</button>
+        <button className={styles.readMoreButton5} onClick={toggleContent}>
+          {isExpanded ? "Read Less" : "Read More"}
+        </button>
       </div>
       <div className={styles["gear-top-left1"]}></div>
       <div className={styles["gear-bottom-right1"]}></div>
-
       <div className={styles.cornerImageRight}></div>
-     
-      
     </div>
     
       {/* Box6 */}

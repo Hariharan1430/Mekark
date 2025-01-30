@@ -65,23 +65,23 @@ const Footer = () => {
           <div className={styles.linksBox}>
             <h3 className={styles.sectionTitle}>Useful Links</h3>
             <ul className={styles.linkList}>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/products">Our Products</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/career">Career</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/About">About Us</a></li>
+              <li><a href="/Product">Our Products</a></li>
+              <li><a href="/Insights">Blog</a></li>
+              <li><a href="/About">Career</a></li>
+              <li><a href="/Contact">Contact Us</a></li>
             </ul>
           </div>
            {/* Quick Links */}
            <div className={styles.linksBox}>
             <h3 className={styles.sectionTitle}>Quick Links</h3>
             <ul className={styles.linkList}>
-              <li><a href="/peb">PEB Services</a></li>
-              <li><a href="/mechanical">Mechanical System</a></li>
-              <li><a href="/electrical">Electrical System</a></li>
-              <li><a href="/plumbing">Plumbing System</a></li>
-              <li><a href="/hvac">HVAC System</a></li>
-              <li><a href="/warehouse Constructions">Warehouse Constructions</a></li>
+              <li><a href="/Product">PEB Services</a></li>
+              <li><a href="/Product">Mechanical System</a></li>
+              <li><a href="/Product">Electrical System</a></li>
+              <li><a href="/Product">Plumbing System</a></li>
+              <li><a href="/Product">HVAC System</a></li>
+              <li><a href="/Product">Warehouse Constructions</a></li>
             </ul>
           </div>
 

@@ -87,11 +87,13 @@
 .mobileNavbar {
   display: none;
   justify-content: space-between;
-  align-items: center;
+  align-items:center; /* Aligns items to the top */
   padding: 15px 20px;
-  background: rgba(30, 46, 95, 0.50); 
+  background: rgba(30, 46, 95, 0.50);
+  position: relative; /* Ensures relative positioning for child elements */
 }
 
+/* Mobile Icons */
 .mobileIcons {
   display: flex;
   gap: 15px;
@@ -107,39 +109,102 @@
 .hamburger {
   width: 28px;
   height: auto;
+  
+}
+
+/* Mobile Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.showOverlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Mobile Menu */
 .mobileMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
+  top: 0;
   right: 0;
-  background: rgba(30, 46, 95, 0.9);
-  padding: 20px;
-  z-index: 10;
+  width: 70%;
+  background: rgba(30, 46, 95, 1);
+  z-index: 200;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
 }
 
-.mobileNavLinks {
+.menuOpen {
+  transform: translateX(0);
+}
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Close Button */
+.intIconWrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.intIconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.intIcon {
+  width: 28px;
+  transition: transform 0.3s ease;
+}
+
+.intIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.mobileNavLinks {
+  list-style: none;
+  margin-top: 60px;
+  padding: 0;
+  display: flex;
   flex-direction: column;
-  gap: 15px;
+}
+
+.mobileNavLinks li {
+  padding: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobileNavLinks li a {
+  font-family: "Public Sans", sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
+  display: block;
+  transition: color 0.3s ease-in-out;
 }
 
 .mobileNavLinks li a:hover {
-  text-decoration: underline;
+  color: #f4b400;
 }
+
+/* .textContentWrapper {
+  margin-top: 60px; 
+  padding: 15px 20px;
+} */
+
 
 /* Responsive view */
 
@@ -150,7 +215,7 @@
 
   .logo {
     width: 70px;
-    height: auto;
+    height: auto; 
   }
 
   .navLinks {
@@ -227,7 +292,7 @@
   }
 
   .mobileNavLinks li a {
-    font-size: 14px;
+    font-size: 16px;
   }
   .mobileNavLinks li a:hover {
     background: rgba(30, 46, 95, 0.8);
