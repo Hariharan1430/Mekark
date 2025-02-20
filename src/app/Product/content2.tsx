@@ -5,7 +5,7 @@ import Image from "next/image";
 import Containerimage1  from '../../../public/Productimages/content2image1.svg';
 import Containerimage2  from '../../../public/Productimages/content2image2.svg';
 
-const PreEngineeredBuilding: React.FC = () => {
+const Content2: React.FC = () => {
   return (
     <div className={styles.container}>
       {/* First Container */}
@@ -69,4 +69,4 @@ const PreEngineeredBuilding: React.FC = () => {
     </div>
   );
 };
-export default PreEngineeredBuilding;
+export default Content2;

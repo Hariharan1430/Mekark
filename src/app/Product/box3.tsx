@@ -6,6 +6,9 @@ import Left from '../../../public/Productimages/LeftArrow.svg';
 import Image from 'next/image';
 import ContentBox1 from './content1';
 import ContentBox2 from './content2';
+import ContactBox3 from './content3';
+import ContactBox4 from './content4';
+import ContactBox5 from './content5'
 
 const TabBar: React.FC = () => {
   const tabs = [
@@ -94,6 +97,12 @@ const TabBar: React.FC = () => {
       {/* Content Box */}
       {activeTab === 0 && <ContentBox1 />}
       {activeTab === 1 && <ContentBox2 />}
+      {activeTab === 2 && <ContactBox3 />}
+      {activeTab === 3 && <ContactBox4 />}
+      {activeTab === 4 && <ContactBox5 />}
+
+
+
     </div>
   );
 };

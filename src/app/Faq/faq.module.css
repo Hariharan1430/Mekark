@@ -1,0 +1,406 @@
+@font-face {
+    font-family: "Halyard Display";
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+    src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+    src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")format("svg");
+  }
+  @font-face {
+    font-family: "Halyard Display Book";
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Box1 Styling */
+.box1 {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('../../../public/FaqImages/faq-Banner.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay */
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+/* Subheading */
+.subheading {
+    color: white;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+.heading {
+    color: white;
+    font-family: "Inter";
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Search Box */
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+     border-radius: 8px;
+    padding: 10px;
+    width: 40%;
+    max-width: 330px;
+
+}
+
+/* Search Icon */
+.searchIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+
+
+}
+
+/* Search Input */
+.searchInput {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    font-family: "Inter";
+    background: rgba(255, 255, 255, 0.01);
+
+
+
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) and (min-width: 901px) {
+    .heading {
+        font-size: 32px;
+    }
+    .subheading{
+        font-size: 18px;
+    }
+    .searchBox {
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+    .heading {
+        font-size: 30px;
+    }
+    .subheading{
+        font-size: 16px;
+    }
+    .searchBox {
+        width: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .box1 {
+        height: 50vh;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+    .subheading{
+        font-size: 14px;
+    }
+
+    .searchBox {
+        width: 40%;
+    }
+    .searchIcon{
+        height: 16px;
+    }
+}
+
+
+/*  Design for box2 */
+
+.box2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+    width: 80%;
+    margin-top: 60px;
+}
+
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* Question */
+.question {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 5px;
+    font-family: "Halyard Display";
+
+}
+
+/* Answer */
+.answer {
+    font-size: 16px;
+    color: #555;
+    font-family: "Halyard Display Book";
+
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .box2 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        padding: 15px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box2 {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .question {
+        font-size: 16px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+    .faqContainer{
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+}
+
+
+/*  Design for box3 */
+.box3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #284287; 
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 80%;
+    color: white;
+    position: relative;
+    margin-top: 200px;
+}
+
+/* Left Box */  
+.leftBox {
+    flex: 1;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-family: "Halyard Display";
+
+}
+
+.text {
+    font-size: 16px;
+    font-family: "Halyard Display Book";
+
+}
+
+/* Right Box */
+.rightBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: -330%; 
+    left: -110%;
+    transform: translateX(-50%);
+}
+
+.image {
+    width: 140px;
+    height: 200px;
+}
+
+/* Button */
+.button {
+    background-color: #1D75BD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Halyard Display";
+
+}
+
+.button:hover {
+    background-color: #1565c0;
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 1170px) and (min-width: 768px){
+    .box3 {
+padding: 15px;
+margin-top: 100px;
+width: 90%;
+}
+    .heading {
+        font-size: 18px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .image {
+        width: 100px;
+        height: 160px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .imageWrapper{
+        left: -70%;
+
+    }
+
+}
+@media (max-width: 767px) and (min-width: 601px){
+    .box3 {
+                padding: 15px;
+        margin-top: 20px;
+        width: 90%;
+    }
+    .heading {
+        font-size: 18px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .imageWrapper {
+        display: none; /* Hide the image */
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+}
+@media (max-width: 600px) {
+    .box3 {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        width: 95%;
+    }
+    .leftBox {
+        margin-bottom: 22px;
+    }
+    .rightBox {
+        gap: 10px;
+        position: relative;
+        align-items: center; /* Center content */
+    }
+    .imageWrapper {
+        display: none; /* Hide the image */
+    }
+    .button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .heading {
+        font-size: 16px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}

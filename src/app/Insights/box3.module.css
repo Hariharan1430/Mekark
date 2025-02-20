@@ -1,0 +1,421 @@
+@font-face {
+    font-family: "Halyard Display Book";
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+  }
+  
+  
+    @font-face {
+      font-family: "Halyard Display";
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+      src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+           url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+    }
+
+
+
+.box3 {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Article Containers */
+  .contentBox {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    text-align: left;
+    letter-spacing: 1px;
+  }
+  
+  /* Image container with overlay */
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height:320px;
+    background-size: cover;
+    background-position: center;
+  border-radius: 8px;
+  }
+  
+  /* Overlay styling */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%);
+
+  }
+  
+  .title {
+ color: #FFF;
+font-size: 48px;
+font-style: normal;
+font-weight: bold;
+font-family: "Halyard Display";
+
+  }
+  
+  .subtitle {
+    color: #FFF;
+    font-family: "Halyard Display Book";
+    font-size: 20px;
+    font-style: normal;
+     font-weight: 400;
+  }
+  
+  /* Small description below the image */
+  .description {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.60);
+    margin: 15px 20px;
+    font-style: italic;
+    
+  }
+  
+  /* Heading (e.g., Introduction) */
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 20px;
+    font-family: "Halyard Display";
+
+  }
+  
+  /* Main content */
+  .content {
+    color: #000;
+font-family: "Halyard Display Book";
+font-size: 17px;
+font-style: normal;
+font-weight: 300;
+line-height: 26px; /* 164.706% */
+    margin: 0 20px;
+  }
+  
+  /* Read More link */
+  .readMore {
+    color: #2075BC;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: "Halyard Display";
+    font-size: 17px;
+
+
+  }
+  
+  .readMore:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Related Articles */
+  .relatedArticles {
+    margin-top: 20px;
+    border-top: 1.5px solid rgba(0, 0, 0, 0.16);;
+  }
+  
+  .relatedHeading {
+    text-align: left;
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    font-family: "Halyard Display";
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  .articleGrid {
+    text-align: left;
+
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .articleCard {
+    flex: 1;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    text-align: left;
+  }
+ 
+  .articleImage {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+  .articleTitle {
+color: #000;
+font-family: "Halyard Display";
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .articleSubtitle {
+    color: #CC0B0B;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+font-family: "Halyard Display";
+margin-top: 5px;
+
+  }
+  
+  .articleDate {
+    font-family: "Halyard Display Book";
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.60);
+    margin-top: 5px;
+  }
+  
+
+/* esponsive Design Mobile: Up to 600px */
+@media (max-width: 600px) {
+    .box3 {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .contentBox {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  
+    .imageContainer {
+      height: 160px;
+    }
+  
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .subtitle {
+      font-size: 14px;
+    }
+  
+    .heading {
+      font-size: 20px;
+    }
+  
+    .content {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: justify;
+    }
+  
+    .readMore {
+      font-size: 14px;
+    }
+  
+    /* Related Articles */
+    .articleGrid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .relatedHeading{
+        text-align: center;
+        font-size: 22px;
+    }
+  
+    .articleCard {
+      width: 100%;
+    }
+  
+    .articleImage {
+      height: 120px;
+    }
+  
+    .articleTitle {
+      font-size: 16px;
+    }
+  
+    .articleSubtitle {
+      font-size: 14px;
+    }
+  
+    .articleDate {
+      font-size: 14px;
+    }
+    .articleCard{
+        max-width: 300px;
+    }
+  }
+  
+  /*  Small Tablets: 600px - 767px */
+  @media (min-width: 600px) and (max-width: 767px) {
+    .box3 {
+      width: 85%;
+    }
+  
+    .imageContainer {
+      height: 200px;
+    }
+  
+    .title {
+      font-size: 26px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .heading {
+      font-size: 22px;
+    }
+  
+    .content {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  
+    .readMore {
+      font-size: 15px;
+    }
+  
+    .articleImage {
+      height: 130px;
+    }
+    .relatedHeading{
+        font-size: 22px;
+    }
+    
+  
+    .articleTitle {
+      font-size: 17px;
+    }
+  
+    .articleSubtitle {
+      font-size: 13px;
+    }
+  
+    .articleDate {
+      font-size: 13px;
+    }
+  }
+  
+  /*  Tablets: 768px - 900px */
+  @media (min-width: 768px) and (max-width: 900px) {
+    .box3 {
+      width: 100%;
+    }
+  
+    .imageContainer {
+      height: 240px;
+    }
+  
+    .title {
+      font-size: 32px;
+    }
+  
+    .subtitle {
+      font-size: 18px;
+    }
+  
+    .heading {
+      font-size: 24px;
+    }
+  
+    .content {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  
+    .readMore {
+      font-size: 16px;
+    }
+    
+  .articleGrid{
+    min-width: 100px
+  }
+    .articleImage {
+      height: 135px;
+    }
+  
+    .articleTitle {
+      font-size: 18px;
+    }
+  
+    .articleSubtitle {
+      font-size: 14px;
+    }
+  
+    .articleDate {
+      font-size: 14px;
+    }
+    .relatedHeading{
+        font-size: 24spx;
+    }
+  }
+  
+  /* 4️⃣ Laptops: 900px - 1200px */
+  @media (min-width: 900px) and (max-width: 1200px) {
+    .box3 {
+      width: 90%;
+    }
+  
+    .imageContainer {
+      height: 260px;
+    }
+  
+    .title {
+      font-size: 36px;
+    }
+  
+    .subtitle {
+      font-size: 18px;
+    }
+  
+    .heading {
+      font-size: 26px;
+    }
+  
+    .content {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  
+    .readMore {
+      font-size: 16px;
+    }
+  
+    .articleImage {
+      height: 140px;
+    }
+  
+    .articleTitle {
+      font-size: 18px;
+    }
+  
+    .articleSubtitle {
+      font-size: 14px;
+    }
+  
+    .articleDate {
+      font-size: 14px;
+    }
+  }

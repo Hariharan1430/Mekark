@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Halyard Display";
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/c4d8819fda4c3fd79e36cedcc8d422bb.svg#Halyard Display") format("svg");
+}
+
+@font-face {
+  font-family: "Halyard Display Book";
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot");
+  src: url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b8e43844aee2ac9d9e78518e974389d9.svg#Halyard Display Book")format("svg");
+}
+
+.box4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fc;
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 2% ;
+
+  }
+  
+  .headingContainer h3 {
+    color: var(--Base-02, #090914);
+    text-align: center;
+    font-family: "Halyard Display";
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 10px;
+    
+  }
+  
+  .headingContainer p {
+    font-size: 18px;
+    color: #090914;
+    max-width: 800px;
+    font-family: "Halyard Display Book";
+
+  }
+  
+  .testimonialsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .card {
+    position: relative;
+    width: 316px;
+    height: 568px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .info h3 {
+    color: var(--base-white, #FFF);
+    font-family: "Halyard Display";
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .info p {
+    color: var(--base-white, #FFF);
+    font-family: "Halyard Display";
+    font-size: 16px;
+    font-weight: 400;
+  }  
+  
+  /* Play Button on the right side inside the image */
+  .playButton {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .reviewLink {
+    margin-top: 30px;
+  }
+  
+  .linkText {
+    font-family: "Halyard Display";
+
+    color: #2563EB;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .headingContainer h3 {
+      font-size: 24px;
+    }
+    .headingContainer p {
+      font-size: 14px;
+    }
+    .card {
+      width: 220px;
+      height: 350px;
+    }
+    .info h3{
+      font-size: 16px;
+    }
+    .info p{
+      font-size: 14px;
+    }
+  }
+  
+ 
+  @media (max-width: 750px) {
+    .box4{
+      padding: 20px;
+    }
+    .testimonialsContainer {
+        flex-direction: column;
+        align-items: center;
+      }
+     
+    .headingContainer h3 {
+      font-size: 22px;
+    }
+    .headingContainer p {
+      font-size: 14px;
+    }
+  
+    .card {
+      width: 250px;
+      height: 360px;
+    }
+  
+    .playButton {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+    .linkText{
+      font-size: 16px;
+    }
+  }
+  

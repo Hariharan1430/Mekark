@@ -73,7 +73,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/faqs">
+              <Link legacyBehavior href="/Faq">
                 <a title="Frequently Asked Questions">FAQ's</a>
               </Link>
             </li>
@@ -153,7 +153,7 @@ const Navbar = () => {
             { name: "Insights", path: "/Insights" },
             { name: "Events", path: "/Events" },
             { name: "Contact", path: "/Contact" },
-            { name: "FAQs", path: "/faqs" },
+            { name: "FAQs", path: "/Faq" },
           ].map((link) => (
             <li key={link.name}>
               <Link legacyBehavior href={link.path}>
