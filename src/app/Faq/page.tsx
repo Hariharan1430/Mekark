@@ -3,10 +3,9 @@ import React from 'react'
 import styles from "./faq.module.css"
 import Image from 'next/image';
 import SearchboxIcon from "../../../public/FaqImages/magnifyingglass.svg"
-import OutlineImage from '../../../public/FaqImages/faq-engineer-outline.png'
+import OutlineImage from '../../../public/FaqImages/faq-outline.svg'
 import { useRouter } from 'next/navigation';
 import Box4 from './box4'
-import Box5 from './box5'
 
 const faqData = [
     {

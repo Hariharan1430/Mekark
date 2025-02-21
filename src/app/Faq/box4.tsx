@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: "Albert Flores",
     role: "Founder of GearUp",
-    image: "/FaqImages/Faqmodel1.png",
+    image: "/FaqImages/faq-model1.svg",
     videoLink: "https://www.youtube.com/watch?v=HO9W6ntA9JE",
   },
   {
     name: "Leslie Alexander",
     role: "Co-Founder of Womenia",
-    image: "/FaqImages/Faqmodel2.png",
+    image: "/FaqImages/faq-model2 (1).svg",
     videoLink: "https://www.youtube.com/watch?v=ychdAPBGvQU",
   },
   {
     name: "Courtney Henry",
     role: "Founder of CH Beauty",
-    image: "/FaqImages/Faqmodel3.png",
+    image: "/FaqImages/faq-model3.svg",
     videoLink: "https://www.youtube.com/watch?v=HO9W6ntA9JE",
   },
 ];
