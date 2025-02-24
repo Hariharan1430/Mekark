@@ -98,9 +98,9 @@ border: #007bff;
 }
 
 
-.tab:hover {
+/* .tab:hover {
 color: #007bff;
-}
+} */
 
 /* Styles for the content area */
 .tabContent {
@@ -133,6 +133,7 @@ height: 100%;
 /* Heading box styles */
 .headingBox {
 margin-bottom: 15px;
+
 }
 
 .heading {

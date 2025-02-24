@@ -28,17 +28,29 @@ const Box6: React.FC = () => {
 
   const contentData = [
     {
-      title: "Pre-Engineered Building",
+      title: (
+        <>
+          Pre-Engineered <br /> Building
+        </>
+      ),
       description:
-        "MEKARK is specialized for innovative pre-engineered building manufacturers, delivering quality structures with speed and efficiency.",
+        "Mekark is specialized for innovative pre-engineered building manufacturers, delivering quality structures with speed and efficiency.",
     },
     {
-      title: "Multi-Storey Steel Building",
+      title: (
+        <>
+          Multi-Storey <br /> Steel Building
+        </>
+      ),
       description:
-        "MEKARK is one of the expert multi-storey steel building manufacturers, delivering durable, sustainable structures with customizable designs.",
+        "Mekark is one of the expert multi-storey steel building manufacturers, delivering durable, sustainable structures with customizable designs.",
     },
     {
-      title: "Space Frame Structure",
+      title: (
+        <>
+         Space Frame  <br /> Structure
+        </>
+      ),
       description:
         "Mekark is the pre-eminent manufacturer and supplier of high quality Space Frame Structural Systems in India.",
     },

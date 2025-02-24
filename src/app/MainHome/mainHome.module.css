@@ -139,6 +139,7 @@
   font-size: 20px;
   color: #fff;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .productbutton {
@@ -159,6 +160,8 @@ border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     align-self: flex-start;
+    letter-spacing: 1.5px;
+
 }
 .productbutton img {
   width: 16px;
@@ -393,6 +396,7 @@ line-height: normal;
   position: relative;
   text-align: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .content3 {
@@ -433,6 +437,7 @@ line-height: normal;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  letter-spacing: 1px;
 }
 
 /* Gear images */
@@ -602,6 +607,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+letter-spacing: 1px;
 }
 
 .divider {
@@ -747,8 +753,8 @@ line-height: normal;
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height:500px ;
+  width: 500px;
+  height:700px ;
   background-image: url('../../../public/HomeImages/framesideimage1.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -812,7 +818,7 @@ line-height: normal;
 }
 
 .description5 {
-  max-width: 60%;
+  max-width:50%;
   color: var(--Primary, #1E2E5F);
   text-align: center;
   font-family: "Halyard Display";
@@ -823,6 +829,7 @@ line-height: normal;
   margin-bottom: 1%;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  letter-spacing: 0.5px;
 }
 .collapsed {
   max-height: 60px; /* Adjust based on the visible lines */
@@ -965,11 +972,11 @@ margin-bottom: 3%;
   .subHeading5 {
     font-size: 22px;
   }
-
+  
   .description5 {
     margin-bottom: 10px;
     font-size: 12px;
-    max-width: 90%;
+    max-width: 100%;
   }
   .imageContainer5 img{
     width: 350px;

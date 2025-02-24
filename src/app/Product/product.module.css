@@ -147,6 +147,7 @@ text-align: center;
   color: var(--Primary, #1E2E5F);
   text-align: center;
   line-height: 1.7;
+  letter-spacing: 0.5px;
 
   
    }

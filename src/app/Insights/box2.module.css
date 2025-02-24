@@ -77,7 +77,7 @@
     background-color: #EDEDED;
     padding: 10px;
     border-radius: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
   }
   
   .tab {
@@ -97,11 +97,10 @@
     border-radius: 50px;
     background: var(--secondary, #1D75BD);
     border: #007bff;
+    cursor: pointer;
   }
   
-  .tab:hover {
-    color: #007bff;
-  }
+  
   
   .tabBar button {
     text-align: center;

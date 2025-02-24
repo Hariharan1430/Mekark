@@ -48,12 +48,11 @@
     line-height: 1.2; 
     word-break: break-word; 
     letter-spacing: 1px;
+    cursor: pointer;
 
   }
   
-  .tab:hover {
-    color: #007bff;
-  }
+  
   
   .activeTab {
     background-color: #1d75bd;
@@ -62,12 +61,13 @@
     border-radius: 50px;
     letter-spacing: 1px;
 
+
   }
   
   .activeTab:hover {
     background-color: #1d75bd;
     color: #fff;
-    cursor: default;
+    cursor: pointer;
   }
   
   .arrow {

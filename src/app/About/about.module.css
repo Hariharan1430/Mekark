@@ -57,7 +57,7 @@
     flex-direction: column;
     position: absolute;
     top: 70%;
-    left: 60%;
+    left: 70%;
     transform: translate(-50%, -50%);
     color: white;
     padding: 20px;
@@ -163,6 +163,7 @@ line-height: normal;
     padding: 20px 20px 40px 30px;
     background-color: #FFF;
     width: 70%;
+    margin-bottom: 2%;
   }
   
   .item {
@@ -179,9 +180,11 @@ line-height: normal;
     font-style: normal;
     font-weight: 100;
     line-height: normal;
-    /* padding-left: 20px; 
-    text-indent: -10px;  */
+    padding-left: 20px; 
+    text-indent: -10px; 
+    letter-spacing: 0.5px;
   }
+  
   
   /* Responsive design for box2 */
   @media (max-width: 1200px) and (min-width:901px){
@@ -331,6 +334,7 @@ color: var(--Primary, #1E2E5F);
         align-items: center;
         padding: 20px 20px 40px 20px;
         background-color: #F7F7F7;
+        margin-bottom: 2%;
       }
        
       .innerContainer {
