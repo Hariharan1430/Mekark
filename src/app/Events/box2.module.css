@@ -65,6 +65,8 @@
   background-repeat: no-repeat;
   animation: rotateGear 3s linear infinite; /* Adjust timing (2s) as needed */
   transform-origin: center;
+  opacity: 0.5;
+
 }
 
 

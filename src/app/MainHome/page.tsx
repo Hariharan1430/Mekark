@@ -155,7 +155,7 @@ export default function Home() {
         </div>
         <div className={styles.card4}>
           <div className={styles.imageContainer4}>
-            <Image src={Cardimage2} alt="Customization Options" width={80} height={80} />
+            <Image src={Cardimage2} alt="Customization Options" width={80} height={80}  />
           </div>
           <p className={styles.title4}>Customization Options</p>
           <p className={styles.description4}>

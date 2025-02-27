@@ -201,6 +201,8 @@ text-align: center;
     .parabox2{
       max-width: 100%;
       font-size: 14px;
+      line-height: 1.3;
+
     }
   
   }
@@ -225,6 +227,7 @@ text-align: center;
   .parabox2{
     max-width: 100%;
     font-size: 14px;
+    line-height: 1.3;
 
   }
   }

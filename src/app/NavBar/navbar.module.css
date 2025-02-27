@@ -82,7 +82,15 @@
   width: 30px;
   height: auto;
 }
+.navLinks li a.activeLink::after,
+.mobileNavLinks li a.activeLink::after {
+  width: 100%; /* Full width for active link */
+}
 
+.navLinks li a.activeLink,
+.mobileNavLinks li a.activeLink {
+  color: #EEE; /* Ensure active link color matches hover */
+}
 /* Mobile/Mini Tablet View */
 .mobileNavbar {
   display: none;

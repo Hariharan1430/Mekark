@@ -25,6 +25,7 @@
   margin-bottom: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  letter-spacing: 1.3px;
 }
 
 .inputContainer {
