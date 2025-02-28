@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./gallery.module.css";
 import Rightarrow from "../../../public/Galleryimages/arrowright.svg";
 import Lefttarrow from "../../../public/Galleryimages/arrowleft.svg";
@@ -22,29 +22,72 @@ const images = [
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Navigate to the next image
   const nextImage = () => {
-    if (currentIndex < images.length - 5) {
+    if (currentIndex < images.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
+  // Navigate to the previous image
   const prevImage = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 5);
-
-  // Handlers for swipe gestures
+  // Swipe handlers for touch and mouse gestures
   const swipeHandlers = useSwipeable({
     onSwipedLeft: nextImage, // Swipe left to move to the next image
     onSwipedRight: prevImage, // Swipe right to move to the previous image
-    trackMouse: true, // Enable mouse swipes for desktop
+    trackMouse: false, // Disable mouse swipes (we'll handle mouse drag manually)
+    trackTouch: true, // Enable touch swipes for mobile
   });
 
+  // Mouse event handlers for click-and-drag navigation
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - startX;
+    if (deltaX > 50) {
+      // Drag right
+      prevImage();
+      setIsDragging(false);
+    } else if (deltaX < -50) {
+      // Drag left
+      nextImage();
+      setIsDragging(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  // Ensure that the visibleImages array always contains 5 images
+  const visibleImages = [];
+  for (let i = 0; i < 5; i++) {
+    const index = (currentIndex + i) % images.length;
+    visibleImages.push(images[index]);
+  }
+
   return (
-    <div className={styles.container} {...swipeHandlers}>
+    <div
+      className={styles.container}
+      {...swipeHandlers} // Swipe gestures for mobile
+      onMouseDown={handleMouseDown} // Mouse drag for desktop
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp} // Stop dragging if mouse leaves the container
+    >
       {/* First Div */}
       <div className={styles.textContainer}>
         <p className={styles.heading1}>Gallery</p>
@@ -86,7 +129,7 @@ const Gallery = () => {
         <button
           className={styles.arrowButton}
           onClick={nextImage}
-          disabled={currentIndex >= images.length - 5}
+          disabled={currentIndex >= images.length - 1}
         >
           <Image src={Rightarrow} alt="Right Arrow" />
         </button>

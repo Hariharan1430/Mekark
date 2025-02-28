@@ -8,7 +8,8 @@ import ContentBox1 from './content1';
 import ContentBox2 from './content2';
 import ContactBox3 from './content3';
 import ContactBox4 from './content4';
-import ContactBox5 from './content5'
+import ContactBox5 from './content5';
+import { useSwipeable } from 'react-swipeable';
 
 const TabBar: React.FC = () => {
   const tabs = [
@@ -29,7 +30,10 @@ const TabBar: React.FC = () => {
   const [visibleStart, setVisibleStart] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
   const [tabsToShow, setTabsToShow] = useState(5); // Default value for tabs to show
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
 
+  // Function to calculate the number of tabs to show based on screen width
   const getTabsToShow = () => {
     if (typeof window === 'undefined') return 5; // Default value for SSR
     if (window.innerWidth <= 600) return 2;
@@ -51,22 +55,64 @@ const TabBar: React.FC = () => {
 
   const visibleTabs = tabs.slice(visibleStart, visibleStart + tabsToShow);
 
+  // Handle previous button click
   const handlePrev = () => {
     if (visibleStart > 0) {
       setVisibleStart(visibleStart - 1);
     }
   };
 
+  // Handle next button click
   const handleNext = () => {
     if (visibleStart + tabsToShow < tabs.length) {
       setVisibleStart(visibleStart + 1);
     }
   };
 
+  // Mouse event handlers for click-and-drag navigation
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - startX;
+    if (deltaX > 50) {
+      // Drag right
+      handlePrev();
+      setIsDragging(false);
+    } else if (deltaX < -50) {
+      // Drag left
+      handleNext();
+      setIsDragging(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  // Swipe handlers for touch navigation
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to move to the next set of tabs
+    onSwipedRight: handlePrev, // Swipe right to move to the previous set of tabs
+    trackMouse: false, // Disable mouse swipes (we handle mouse drag manually)
+    trackTouch: true, // Enable touch swipes for mobile
+  });
+
   return (
     <div className={styles.container}>
       {/* Tab Bar */}
-      <div className={styles.tabBarWrapper}>
+      <div
+        className={styles.tabBarWrapper}
+        {...swipeHandlers} // Swipe gestures for mobile
+        onMouseDown={handleMouseDown} // Mouse drag for desktop
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp} // Stop dragging if mouse leaves the container
+      >
         <Image
           src={Left}
           alt="Previous"
@@ -100,9 +146,6 @@ const TabBar: React.FC = () => {
       {activeTab === 2 && <ContactBox3 />}
       {activeTab === 3 && <ContactBox4 />}
       {activeTab === 4 && <ContactBox5 />}
-
-
-
     </div>
   );
 };
